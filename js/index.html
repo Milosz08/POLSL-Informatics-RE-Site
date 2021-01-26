@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Kukisy są spoko</title>
+</head>
+
+<body>
+  <style>
+       
+      
+    .highlight-red {
+      color: red;
+    }
+
+    .highlight-green {
+      color: green;
+    }
+
+    .highlight-yellow {
+      color: blue;
+    }
+      
+      input[type=radio] {
+         float: left;
+      }
+      
+
+  </style>
+  <div class="col-lg-10">
+    <div style="width: 1100px;">
+      <label>
+        <div><input type="radio" name="cb" id="cb1" value="y" onChange="changeChoice1(this, 'red')"/></div>
+        <div class="table1">Kliknij mnie typie</div>
+      </label>
+      <label>
+        <div><input type="radio" name="cb" id="cb2" value="y" onChange="changeChoice1(this, 'green')" /></div>
+        <div class="table2">Kliknij mnie typie</div>
+      </label>
+      <label>
+        <div class="table2"><input type="radio" name="cb" id="cb3" value="y" onChange="changeChoice1(this, 'yellow')" /></div>
+        <div class="table3">Kliknij mnie typie</div>
+      </label><br>
+    </div>
+    
+    <h3 class="test" style="display: none;">chuj1 do kurwy 1</h3>
+    <h3 class="test2" style="display: none;">chuj2 do kurwy 1</h3>
+    <h3 class="test3" style="display: none;">chuj3 do kurwy 1</h3>
+    
+    <br><br>
+    
+    <div id="Table2" border="1">
+      <label class="highlight">
+        <div><input type="radio" name="cb2" id="cb4" value="x" onChange="changeChoice2(this, 'red')"/></div>
+        <div class="table1_2">Kliknij mnie inny typie</div>
+      </label>
+      <label>
+        <div><input type="radio" name="cb2" id="cb5" value="x" onChange="changeChoice2(this, 'green')" /></div>
+        <div class="table2_2">Kliknij mnie inny typie</div>
+      </label>
+      <label>
+        <div class="table2"><input type="radio" name="cb2" id="cb6" value="x" onChange="changeChoice2(this, 'yellow')" /></div>
+        <div class="table3_2">Kliknij mnie inny typie</div>
+      </label>
+    </div>
+    
+    <br>
+    <h3 class="test4" style="display: block;">chuj1 do kurwy 2</h3>
+    <h3 class="test5" style="display: none;">chuj2 do kurwy 2</h3>
+    <h3 class="test6" style="display: none;">chuj3 do kurwy 2</h3>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var ciastko = $.cookie('fajneCiastko');
+      if(ciastko !== undefined) {
+        $(ciastko).each(function() {
+          this.click();
+        })
+      }
+
+    })
+
+    function changeChoice1(data, color) {
+      if(data.checked && color == 'red') {
+        $(".table1").addClass("highlight-red");
+        $(".table2").removeClass("highlight-green");
+        $(".table3").removeClass("highlight-yellow");
+        $(".test").css("display","block");
+      }
+      else {
+        $(".test").css("display","none");
+      }
+      if(data.checked && color == 'green') {
+        $(".table1").removeClass("highlight-red");
+        $(".table2").addClass("highlight-green");
+        $(".table3").removeClass("highlight-yellow");
+        $(".test2").css("display","block");
+      }
+      else {
+        $(".test2").css("display","none");
+      }
+      if(data.checked && color == 'yellow') {
+        $(".table1").removeClass("highlight-red");
+        $(".table2").removeClass("highlight-green");
+        $(".table3").addClass("highlight-yellow");
+        $(".test3").css("display","block");
+      }
+      else {
+        $(".test3").css("display","none");
+      }
+
+      var checked = "";
+      $('input[type="radio"]').each(function() {
+        if($(this).prop('checked')) {
+          checked += "#" + this.id + ","; 
+        }
+      })
+
+      checked = checked.replace(/,$/, '')
+      $.cookie('fajneCiastko', checked);
+    }
+      
+    function changeChoice2(data, color) {
+      if(data.checked && color == 'red') {
+        $(".table1_2").addClass("highlight-red");
+        $(".table2_2").removeClass("highlight-green");
+        $(".table3_2").removeClass("highlight-yellow");
+        $(".test4").css("display","block");
+      }
+      else {
+        $(".test4").css("display","none");
+      }
+      if(data.checked && color == 'green') {
+        $(".table1_2").removeClass("highlight-red");
+        $(".table2_2").addClass("highlight-green");
+        $(".table3_2").removeClass("highlight-yellow");
+        $(".test5").css("display","block");
+      }
+      else {
+        $(".test5").css("display","none");
+      }
+      if(data.checked && color == 'yellow') {
+        $(".table1_2").removeClass("highlight-red");
+        $(".table2_2").removeClass("highlight-green");
+        $(".table3_2").addClass("highlight-yellow");
+        $(".test6").css("display","block");
+      }
+      else {
+        $(".test6").css("display","none");
+      }
+
+      var checked = "";
+      $('input[type="radio"]').each(function() {
+        if($(this).prop('checked')) {
+          checked += "#" + this.id + ","; 
+        }
+      })
+
+      checked = checked.replace(/,$/, '')
+      $.cookie('fajneCiastko', checked);
+    }
+
+  </script>
+</body>
+
+</html>

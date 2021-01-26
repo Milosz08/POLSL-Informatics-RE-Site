@@ -1,0 +1,445 @@
+<html lang="pl-PL">
+  <head>
+    <meta charset="utf-8"/>
+        <!--RWD PARAMETERS-->
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+        <!--SEO-->
+    <title>INF RE rocznik 2020/2021</title>
+    <meta name="description" content="Strona dla Studentów I roku informatyki na wydziale elektrycznym 2020/2021"/>
+    <meta name="keywords" content="politechnika, politechnika śląska, informatyka, elektryczny, plan, kalendarz, informacje, interaktywny, strona responsywna, ważne daty"/>
+    <link rel="shortcut icon" type="image/png" href="css/favicon.png"/>
+        <!--CSS LINKS-->
+    <link rel="stylesheet" href="css/main_style.css"/>
+    <link rel="stylesheet" href="css/shedule_style.css"/>
+    <link rel="stylesheet" href="css/hamburger_style.css"/>
+    <link rel="stylesheet" href="css/cookies_style.css"/>
+    <link rel="stylesheet" href="css/work_in_progress.css"/>
+        <!--GOOGLE FONTS LINKS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+        <!--LIBRARIES SCRIPTS LINKS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"/> 
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/fb5e04a633.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+        <!--CUSTOM JAVASCRIPT/JQUERY SCRIPTS LINKS-->
+    <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
+        <!--MENU ANIMATION SHOW/HIDE-->   
+    <script type="text/javascript" name="menu_anim">  
+      $(document).ready(function() {
+        //MENU ANIMATION ON CLICK (LEFT BAR ONLY DESKTOP)
+        $(".hamburger_bars").click(function() {
+          $(this).toggleClass("ham_active");
+          $(".nav_menu_style").toggleClass("nav_menu_active");
+          $(".menu_content_style").toggleClass("menu_content_active");
+        });
+        //MENU ANIMATION ON CLICK (TOP BAR ONLY MOBILE)
+        $(".hamburger_bars2").click(function() {
+          $(this).toggleClass("ham_active");  
+          $(".menu_content_style_m").toggleClass("menu_content_active_m");
+          $("body").toggleClass("body_overflow");
+        });
+        //MENU ANIMATION ON HOVER (DESCRIPTIONS)
+        $(".menu_content_txt1").hover(function(){
+          $(this).toggleClass("menu_content_txt_hover");
+          $(".line_between1").toggleClass("line_between_hover"); });
+        $(".menu_content_txt2").hover(function(){
+          $(this).toggleClass("menu_content_txt_hover");
+          $(".line_between2").toggleClass("line_between_hover"); });
+        $(".menu_content_txt3").hover(function(){
+          $(this).toggleClass("menu_content_txt_hover");
+          $(".line_between3").toggleClass("line_between_hover"); });
+        $(".menu_content_txt4").hover(function(){
+          $(this).toggleClass("menu_content_txt_hover");
+          $(".line_between4").toggleClass("line_between_hover"); });
+        $(".menu_content_txt5").hover(function(){
+          $(this).toggleClass("menu_content_txt_hover");
+          $(".line_between5").toggleClass("line_between_hover"); });
+        $(".menu_content_txt6").hover(function(){
+          $(this).toggleClass("menu_content_txt_hover");
+          $(".line_between6").toggleClass("line_between_hover");
+          $(this).css("cursor","pointer"); });
+            //ONCLICK MOVE TO DIV  
+        $(".menu_content_txt6").click(function(){
+          $.scrollTo($(".slider_style"), 500);  });
+            //HOVER ARROW AND YELLOW CIRCLE
+        $(".choose_circle").hover(function() {
+          $(".arrow_img").toggleClass("arrow_connect_hover"); });
+            //HOVER ARROW AND YELLOW CIRCLE
+        $(".reload_shedule, .reload_shedule_m").hover(function() {
+          $(".reload_icon").toggleClass("reload_icon_hover"); });
+        $(".reload_shedule, .reload_shedule_m").click(function() {
+          location.reload(); 
+          $.scrollTo($("body"), 500); });
+        });
+    </script>
+    <script type="text/javascript" name="site_navigation">
+      //SHOW/HIDE NAVBAR ON SCROLL FUNCTION  
+      $(document).ready(function() {
+        //DESKTOP MENU & NAVBAR SECTION
+        $(window).scroll(function() {
+          if($(this).scrollTop() > 600) {
+            $(".nav_menu_style").removeClass("hide_navbar");
+            $(".menu_content_style").addClass("menu_content_style_show");
+          } else {
+            $(".nav_menu_style").addClass("hide_navbar"); 
+            $(".menu_content_style").removeClass("menu_content_style_show"); }
+        });
+        //MOBILE MENU & NAVBAR SECTION
+        $(window).scroll(function() {
+          if($(this).scrollTop() < 1800) {
+            $(".mobile_header").removeClass("hide_mobile_header");
+            $(".menu_content_style_m").removeClass("menu_content_style_show_m");
+          } else {
+            $(".mobile_header").addClass("hide_mobile_header");
+            $(".menu_content_style_m").addClass("menu_content_style_show_m"); }
+        });
+      });
+    </script>
+    <script type="text/javascript"  name="buttons_site_navigation">
+      $(document).ready(function() {    
+        $.scrollTo(0); //SCROLL RESET
+        var $bodyWidth = $("body");
+        var $retToTop = $(".back_to_top");
+            //SCROLL TO CHOOSE MENU (UP)
+        $(".scrollTo_button_upper").click(function() {
+          if($bodyWidth.width() > 1200) {
+            $.scrollTo($(".menu_content_style"), 500);
+          } else {
+            $.scrollTo($(".arrow_bottom_nav"), 500); }
+        });
+            //SCROLL TO BOTTOM INFOGRAPHICS CONTENT (DOWN)
+        $(".arrow_bottom_nav").click(function() {
+          $.scrollTo($(".bottom_content"), 500); 
+        });
+            //SCROLL TO BODY (BUTTON)
+        $($retToTop).click(function() {
+          $.scrollTo($("body"), 500); 
+        });    
+      });
+            //SHOW/HIDE (BUTTON)
+      $(window).scroll(function() {
+            //VARIABLES DECLARATION
+        var $buttonD = $(".return_top_button_desktop");
+        var $buttonM = $(".return_top_button_mobile");
+        var $bodyWidth = $("body");
+            //FOR RESPONSIVE PAGE WHEN "BODY" > 1200wh
+        if($bodyWidth.width() > 1200) {
+          if($(window).scrollTop() > 300) { 
+            $($buttonD).addClass("back_top_activeD");
+          } else {
+            $($buttonD).removeClass("back_top_activeD"); }
+            //FOR RESPONSIVE PAGE WHEN "BODY" < 1200wh && <= 1200wh
+        } else {
+          if($(window).scrollTop() < 800) { 
+            $($buttonM).removeClass("back_top_activeM");
+          } else {
+            $($buttonM).addClass("back_top_activeM"); } 
+        }
+      }); 
+    </script>
+</head>
+      <!--THIS HTML, CSS AND JAVASCRIPT (INCLUDING JQUERY) CODE IS OWNED BY MIŁOSZ GILGA. COPYRIGHT 2020-2021 BY MIŁOSZ GILGA.-->
+  <body>
+    <nav name="page_up_buttons">
+      <div name="return_top_buttonD" class="return_top_button_desktop back_to_top">
+        <i class="fas fa-arrow-up arrow_return_style"></i>    
+      </div>
+        <div name="return_top_buttonM" class="return_top_button_mobile back_to_top">
+          <i class="fas fa-arrow-up arrow_return_style"></i>
+        </div> 
+      </nav>
+        <!--MENU MOBILE ONLY POP UP SHOW/HIDE--> 
+    <div class="mobile_header">
+      <div class="hamburger_bars2">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>    
+      </div>
+        <p class="title_menu_m">INFORMATYKA&nbsp;<span style="color:#919191;">RE</span></p>
+    </div>
+    <nav class="menu_content_style_m" name="popup_menu_mobile" style="padding-bottom:80px !important;"> 
+      <div class="menu_content_txt_head">MENU</div><br><br><br>
+        <a href="main" class="hover_menu_content">
+          <div class="menu_content_txt1" style="margin:0 !important;">Interaktywny plan zajęć
+            <div class="line_between1"></div>
+              <i class="fas fa-book-open menu_icon"></i>
+            </div>
+        </a>
+            <a href="work-in-progress" class="hover_menu_content">
+              <div class="menu_content_txt2">Kalendarz z ważnymi datami
+                <div class="line_between2"></div>
+                  <i class="far fa-calendar-alt menu_icon"></i>
+              </div>
+            </a>
+        <a href="work-in-progress" class="hover_menu_content">
+          <div class="menu_content_txt3">Warunki zaliczenia przedmiotów
+            <div class="line_between3"></div>
+              <i class="fas fa-calculator menu_icon"></i>
+          </div>
+        </a>
+            <a href="work-in-progress" class="hover_menu_content">
+              <div class="menu_content_txt4">Pomoce naukowe
+                <div class="line_between4"></div>
+                  <i class="fas fa-lightbulb menu_icon"></i>
+                </div>
+            </a>
+        <a href="http://www.elektr.polsl.pl/" target="_blank" class="hover_menu_content">
+          <div class="menu_content_txt5" style="margin:0 !important;padding-bottom:127px;">Oficjalna strona wydziału
+            <div class="line_between5"></div>
+              <i class="fas fa-globe-asia menu_icon"></i>
+          </div>
+        </a>
+     </nav>
+         <!--MENU DESKTOP ONLY POP UP SHOW/HIDE-->  
+    <nav class="menu_content_style" name="popup_menu_desktop"> 
+      <div class="menu_content_txt_head">MENU</div><br><br><br>
+        <a href="main" class="hover_menu_content">
+          <div class="menu_content_txt1" style="margin:0 !important;">Interaktywny plan zajęć
+            <div class="line_between1"></div>
+              <i class="fas fa-book-open menu_icon"></i>
+            </div>
+        </a>
+            <a href="work-in-progress" class="hover_menu_content">
+              <div class="menu_content_txt2">Kalendarz z ważnymi datami
+                <div class="line_between2"></div>
+                  <i class="far fa-calendar-alt menu_icon"></i>
+              </div>
+            </a>
+        <a href="work-in-progress" class="hover_menu_content">
+          <div class="menu_content_txt3">Warunki zaliczenia przedmiotów
+            <div class="line_between3"></div>
+              <i class="fas fa-calculator menu_icon"></i>
+          </div>
+        </a>
+            <a href="work-in-progress" class="hover_menu_content">
+              <div class="menu_content_txt4">Pomoce naukowe
+                <div class="line_between4"></div>
+                  <i class="fas fa-lightbulb menu_icon"></i>
+                </div>
+            </a>
+        <a href="http://www.elektr.polsl.pl/" target="_blank" class="hover_menu_content">
+          <div class="menu_content_txt5">Oficjalna strona wydziału
+            <div class="line_between5"></div>
+              <i class="fas fa-globe-asia menu_icon"></i>
+          </div>
+        </a>
+            <a href="main" class="hover_menu_content">
+              <div class="menu_content_txt6" style="margin:0 !important;padding-bottom:127px;">Linki do Platformy Zdalnej Edukacji
+                <div class="line_between6"></div>
+                  <i class="fas fa-chalkboard-teacher menu_icon"></i>
+                </div>
+            </a>
+     </nav>
+           <!--MAIN CONTENT-->
+    <main class="container-fluid" style="padding:0;">
+      <div class="row">
+           <!--MAIN CONTENT (LEFT NAVIGATION BAR)-->
+        <div class="col-xl-12" style="padding:0;height:auto !important;">
+          <header name="main_navigation_menu" class="nav_menu_style hide_navbar">
+            <p class="title_menu">INFORMATYKA&nbsp;<span style="color:#919191;">RE</span></p>
+              <nav name="left_menu">
+                <div class="hamburger_bars">
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>    
+                </div>
+              </nav>
+            </header>
+              <section>
+                    <!--COOKIES PRIVATY CONTENT (LEFT NAVIGATION BAR)-->
+                <div class="cookies_content">
+                   <header class="cookies_title">Polityka Cookies</header>
+                     <p class="cookies_txt">Poniższa Polityka Cookies określa zasady zapisywania i uzyskiwania dostępu do danych na Urządzeniach Użytkowników korzystających z Serwisu do celów świadczenia usług drogą elektroniczną przez Administratora Serwisu.</p>
+                       <div class="separate_line_cookies">
+                         <i class="fas fa-cookie-bite icon_cookies_separate"></i>      
+                       </div>
+                     <header class="cookies_title">&sect; 1 &nbsp;&nbsp;Definicje</header> 
+                       <ul class="cookies_txt">
+                         <li class="li_cookies">
+                           <strong>Serwis</strong> - serwis internetowy działający pod adresem informatyka-pol-elektr.pl.
+                         </li>
+                           <li class="li_cookies">
+                             <strong>Serwis zewnętrzny</strong> - serwis internetowy partnerów, usługodawców lub usługobiorców Administratora serwera.
+                           </li>   
+                         <li class="li_cookies">
+                           <strong>Administrator</strong> - firma, świadcząca usługi drogą elektroniczną za pośrednictwem Serwisu oraz przechowująca i uzyskująca dostęp do informacji w urządzeniach Użytkownika.
+                         </li> 
+                           <li class="li_cookies">
+                             <strong>Użytkownik</strong> - osoba fizyczna, dla której Administrator świadczy usługi drogą elektroniczna za pośrednictwem Serwisu.
+                           </li>  
+                         <li class="li_cookies">
+                           <strong>Urządzenie</strong> - elektroniczne urządzenie wraz z oprogramowaniem, za pośrednictwem, którego Użytkownik uzyskuje dostęp do Serwisu.
+                         </li>  
+                           <li class="li_cookies">
+                             <strong>Cookies (ciasteczka)</strong> - dane tekstowe gromadzone w formie plików zamieszczanych na Urządzeniu Użytkownika.
+                           </li>    
+                       </ul>
+                         <div class="separate_line_cookies">
+                           <i class="fas fa-cookie-bite icon_cookies_separate"></i>      
+                         </div>
+                       <header class="cookies_title">&sect; 2 &nbsp;&nbsp;Rodzaje Cookies</header>
+                         <ul class="cookies_txt">
+                           <li class="li_cookies">
+                             <strong>Cookies wewnętrzne</strong> - pliki zamieszczane i odczytywane z Urządzenia Użytkownika przes system teleinformatyczny Serwisu.
+                           </li>
+                         <li class="li_cookies">
+                           <strong>Cookies zewnętrzne</strong> - pliki zamieszczane i odczytywane z Urządzenia Użytkownika przez systemy teleinformatyczne Serwisów zewnętrznych.
+                         </li>   
+                           <li class="li_cookies">
+                             <strong>Cookies sesyjne</strong> - pliki zamieszczane i odczytywane z Urządzenia Użytkownika przez Serwis lub Serwisy zewnętrzne podczas jednej sesji danego Urządzenia. Po zakończeniu sesji pliki są usuwane z Urządzenia Użytkownika.
+                           </li> 
+                         <li class="li_cookies">
+                           <strong>Cookies trwałe</strong> - pliki zamieszczane i odczytywane z Urządzenia Użytkownika przez Serwis lub Serwisy zewnętrzne do momentu ich ręcznego usunięcia. Pliki nie są usuwane automatycznie po zakończeniu sesji Urządzenia chyba że konfiguracja Urządzenia Użytkownika jest ustawiona na tryb usuwanie plików Cookie po zakończeniu sesji Urządzenia.
+                         </li>  
+                       </ul>
+                         <div class="separate_line_cookies">
+                           <i class="fas fa-cookie-bite icon_cookies_separate"></i>      
+                         </div>
+                       <header class="cookies_title">&sect; 3 &nbsp;&nbsp;Bezpieczeństwo</header>
+                         <ul class="cookies_txt">
+                           <li class="li_cookies">
+                             <strong>Mechanizmy składowania i odczytu</strong> - mechanizmy składowania i odczytu Cookies nie pozwalają na pobierania jakichkolwiek danych osobowych ani żadnych informacji poufnych z Urządzenia Użytkownika. Przeniesienie na Urządzenie Użytkownika wirusów, koni trojańskich oraz innych robaków jest praktynie niemożliwe.
+                           </li>
+                         <li class="li_cookies">
+                           <strong>Cookie wewnętrzne</strong> - zastosowane przez Administratora Cookie wewnętrzne są bezpieczne dla Urządzeń Użytkowników.
+                         </li>   
+                           <li class="li_cookies">
+                             <strong>Cookie zewnętrzne</strong> - za bezpieczeństwo plików Cookie pochodzących od partnerów Serwisu Administrator nie ponosi odpowiedzialności. Powyższa strona internetowa nie korzysta z plików Cookie pochodzących z zewnętrznych źródeł.
+                           </li> 
+                         </ul>
+                           <div class="separate_line_cookies">
+                             <i class="fas fa-cookie-bite icon_cookies_separate"></i>      
+                           </div>
+                         <header class="cookies_title">&sect; 4 &nbsp;&nbsp;Cele do których wykorzystywane są pliki Cookies</header>
+                           <ul class="cookies_txt">
+                             <li class="li_cookies">
+                               <strong>Usprawnienie i ułatwienie dostępu do Serwisu</strong> - Administrator może przechowywać w plikach Cookie informacje o prefernecjach i ustawieniach użytkownika dotyczących Serwisu aby usprawnić, polepszyć i przyśpieszyć świadczenie usług w ramach Serwisu.
+                             </li>
+                           </ul>
+                             <div class="separate_line_cookies">
+                               <i class="fas fa-cookie-bite icon_cookies_separate"></i>      
+                             </div>
+                           <header class="cookies_title">&sect; 5 &nbsp;&nbsp;Serwisy zewnętrzne</header>
+                             <p class="cookies_txt">Administrator nie współpracuje z żadnymi serwisami zewnętrznymi, które mogą zamieszczać pliki Cookie na Urządzeniach Użytkownika.</p>
+                           <div class="separate_line_cookies">
+                             <i class="fas fa-cookie-bite icon_cookies_separate"></i>      
+                           </div>
+                         <header class="cookies_title">&sect; 6 &nbsp;&nbsp;Określanie warunków Cookies</header>
+                           <ul class="cookies_txt">
+                             <li class="li_cookies">
+                               Użytkownik może w dowolnym momencie, samodzielnie zmienić ustawienia dotyczące zapisywania, usuwania oraz dostępu do danych zapisanych plików Cookies.
+                             </li>
+                               <li class="li_cookies">
+                                 Informacje o sposobie wyłączenia plików Cookie w najpopularniejszych przeglądarkach komputerowych i urządzeń mobilnych dostępna jest w dalszej sekcji dokumentu.
+                               </li>
+                             <li class="li_cookies">
+                               Użytkownik może w dowolnym momencie usunąć wszelkie zapisane do tej pory pliki Cookie korzystając z narzędzi Urządzenia Użytkownika za pośrednictwem którego Użytkowanik korzysta z usług Serwisu.
+                             </li>
+                           </ul>
+                             <div class="separate_line_cookies">
+                               <i class="fas fa-cookie-bite icon_cookies_separate"></i>      
+                             </div>
+                           <header class="cookies_title">&sect; 7 &nbsp;&nbsp;Odroczenia</header>
+                             <ul class="cookies_txt">
+                               <li class="li_cookies">
+                                 Administrator stosuje wszelkie możliwe środki w celu zapewnienia bezpieczeństwa danych umieszczanych w plikach Cookie. Należy jednak zwrócić uwagę, że zapewnienie bezpieczeństwa tych danych zależy od obu stron, w tym działalności Użytkownika oraz satnu zabezpieczeń urządzenia z którego korzysta.
+                               </li>
+                             <li class="li_cookies">
+                               Administrator nie bierze odpowiedzialności za przechwycenie danych zawartych w plikach Cookie, podszycie się pod sesję Użytkownika lub ich usunięcie, na skutek świadomej lub nieświadomej działalność Użytkownika, wirusów, koni trojańskich i innego oprogramowania szpiegującego, którymi może być zainfekowane Urządzenie Użytkownika.
+                             </li>
+                               <li class="li_cookies">
+                                 Użytkownicy w celu zabezpieczenia się przed wskazanymi w punkcie poprzednim zagrożeniami powinni stosować się do zasad bezpiecznego korzystania z internetu.
+                               </li>
+                             <li class="li_cookies">
+                               Usługi świadczone przez podmioty trzecie są poza kontrolą Administratora. Podmioty te mogą w każdej chwili zmienić swoje warunki świadczenia usług, cel oraz wykorzystanie plików cookie. Administrator nie odpowiada na tyle na ile pozwala na to prawo za działanie plików cookies używanych przez serwisy partnerskie. Użytkownicy w każdej chwili mogą samodzielnie zarządzać zezwoleniami i ustawieniami plików cookie dla każedej dowolnej witryny.
+                             </li>
+                           </ul>
+                             <div class="separate_line_cookies">
+                               <i class="fas fa-cookie-bite icon_cookies_separate"></i>      
+                             </div>
+                           <header class="cookies_title">&sect; 8 &nbsp;&nbsp;Wymagania Serwisu</header>
+                             <ul class="cookies_txt">
+                               <li class="li_cookies">
+                                 Ograniczenie zapisu i dostępu do plików Cookie na Urządzeniu Użytkownika może spowodować nieprawidłowe działanie niektórych funkcji Serwisu.
+                               </li>
+                             <li class="li_cookies">
+                               Administrator nie ponosi żadnej odpowiedzialności za nieprawidłowo działające funkcje Serwisu w przypadku gdy Użytkownik ograniczy w jakikolwiek sposób możliwość zapisywania i odczytu plików Cookie.
+                             </li>
+                           </ul>
+                             <div class="separate_line_cookies">
+                               <i class="fas fa-cookie-bite icon_cookies_separate"></i>      
+                             </div>
+                           <header class="cookies_title">&sect; 9 &nbsp;&nbsp;Zmiany w polityce Cookie</header>
+                             <ul class="cookies_txt">
+                               <li class="li_cookies">
+                                 Administrator zastrzega sobie prawo do dowolnej zmiany niniejszej Polityki Cookie bez konieczności informowania o tym użytkowników.
+                               </li>
+                             <li class="li_cookies">
+                               Wprowadzone zmiany w Polityce Cookie zawsze będą publikowane na tej stronie.
+                             </li>
+                               <li class="li_cookies">
+                                 Wprowadzone zmiany wchodzą w życie w dniu publikacji Polityki Cookie.
+                               </li>
+                             </ul>
+                               <div class="separate_line_cookies">
+                                 <i class="fas fa-cookie-bite icon_cookies_separate"></i>      
+                               </div>
+                             <header class="cookies_title">&sect; 10 &nbsp;&nbsp;Jak wyłączyć pliki Cookie</header>
+                               <p class="cookies_txt">Dyrektywa Unijna i Polskie Prawo Telekomunikacyjne nakazuje serwisom internetowym informowanie swoich użytkowników w jakim celu je wykorzystują i jak można je wyłączyć. W większości przeglądarek sposób wyłączenia plików cookie można opisać następująco:</p>
+                            <ol class="cookies_txt">
+                               <li class="li_cookies">Otwórz menu przeglądarki</li>
+                             <li class="li_cookies">Wybierz Ustawienia</li>
+                               <li class="li_cookies">Wybierz Ustawienia zaawansowane lub Bezpieczeństwo i Prywatność</li>
+                             <li class="li_cookies">Ustaw blokadę na pliki cookie</li>
+                           </ol>
+                         <div class="return_cookie_button">
+                           <a class="button_link_cookie" href="main">Powrót do strony głównej</a>
+                         </div>
+                       </div>
+                     </section>
+                   </div>
+                 </div>
+               </main>
+        <!--FOOTER SECTION-->
+    <footer class="footer shadow">
+      <div class="container-fluid" style="padding:0">
+        <div class="row justify-content-center">
+          <div class="col-xl-4 desktop_footer" style="text-align:left;">
+            Some icons by 
+              <a href="https://fontawesome.com/" target="_blank" style="color:#5e5e5e;font-weight:500;">Font Awesome</a> 
+            and 
+              <a href="https://stock.adobe.com/" target="_blank" style="color:#5e5e5e;font-weight:500;">Adobe&reg; Stock</a>
+          </div>
+            <div class="col-xl-4 desktop_footer">
+              &copy; 2020-2021 by 
+                <a style="color:#5e5e5e;font-weight:500;">Miłosz Gilga.</a>   &nbsp;&nbsp;&nbsp;All rights reserved.     
+            </div>
+          <div class="col-xl-4 desktop_footer" style="text-align:right;">
+            This site feeds on cookies.&nbsp;&nbsp;
+              <i class="fas fa-cookie-bite"></i>&nbsp;&nbsp;&nbsp;
+                <a style="color:#5e5e5e;font-weight:500;" href="cookies">Privaty policy</a>  
+          </div>
+          <div class="col-xl-12 mobile_footer">
+            Some icons by 
+              <a href="https://fontawesome.com/" target="_blank" style="color:#5e5e5e;font-weight:500;">Font Awesome</a> 
+            and 
+              <a href="https://stock.adobe.com/" target="_blank" style="color:#5e5e5e;font-weight:500;">Adobe&reg; Stock</a>
+            <br><br>
+            &copy; 2020-2021 by 
+              <a style="color:#5e5e5e;font-weight:500;">Miłosz Gilga.</a>
+                &nbsp;&nbsp;&nbsp;All rights reserved.<br><br>
+              This site feeds on cookies.&nbsp;&nbsp;
+                <i class="fas fa-cookie-bite"></i>&nbsp;&nbsp;&nbsp;
+            <a style="color:#5e5e5e;font-weight:500;" href="cookies">Privaty policy</a><br><br><br><br> 
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>

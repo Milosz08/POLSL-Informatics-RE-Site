@@ -1,0 +1,1476 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+  <head>
+    <meta charset="utf-8"/>
+        <!--RWD PARAMETERS-->
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+        <!--SEO-->
+    <title>INF RE rocznik 2020/2021</title>
+    <meta name="description" content="Strona dla Studentów I roku informatyki na wydziale elektrycznym 2020/2021"/>
+    <meta name="keywords" content="politechnika, politechnika śląska, informatyka, elektryczny, plan, kalendarz, informacje, interaktywny, strona responsywna, ważne daty"/>
+    <link rel="shortcut icon" type="image/png" href="css/favicon.png"/>
+        <!--CSS LINKS-->
+    <link rel="stylesheet" href="css/main_style.css"/>
+    <link rel="stylesheet" href="css/shedule_style.css"/>
+    <link rel="stylesheet" href="css/hamburger_style.css"/>
+    <link rel="stylesheet" href="css/cookies_style.css"/>
+        <!--GOOGLE FONTS LINKS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com"/>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
+        <!--LIBRARIES SCRIPTS LINKS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"/> 
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/fb5e04a633.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+        <!--CUSTOM JAVASCRIPT/JQUERY SCRIPTS LINKS-->
+    <script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
+        <!--MENU ANIMATION SHOW/HIDE-->   
+    <script type="text/javascript" name="menu_anim">  
+      $(document).ready(function() {
+        //MENU ANIMATION ON CLICK (LEFT BAR ONLY DESKTOP)
+        $(".hamburger_bars").click(function() {
+          $(this).toggleClass("ham_active");
+          $(".nav_menu_style").toggleClass("nav_menu_active");
+          $(".menu_content_style").toggleClass("menu_content_active");
+        });
+        //MENU ANIMATION ON CLICK (TOP BAR ONLY MOBILE)
+        $(".hamburger_bars2").click(function() {
+          $(this).toggleClass("ham_active");  
+          $(".menu_content_style_m").toggleClass("menu_content_active_m");
+          $("body").toggleClass("body_overflow");
+        });
+        //MENU ANIMATION ON HOVER (DESCRIPTIONS)
+        $(".menu_content_txt1").hover(function(){
+          $(this).toggleClass("menu_content_txt_hover");
+          $(".line_between1").toggleClass("line_between_hover"); });
+        $(".menu_content_txt2").hover(function(){
+          $(this).toggleClass("menu_content_txt_hover");
+          $(".line_between2").toggleClass("line_between_hover"); });
+        $(".menu_content_txt3").hover(function(){
+          $(this).toggleClass("menu_content_txt_hover");
+          $(".line_between3").toggleClass("line_between_hover"); });
+        $(".menu_content_txt4").hover(function(){
+          $(this).toggleClass("menu_content_txt_hover");
+          $(".line_between4").toggleClass("line_between_hover"); });
+        $(".menu_content_txt5").hover(function(){
+          $(this).toggleClass("menu_content_txt_hover");
+          $(".line_between5").toggleClass("line_between_hover"); });
+        $(".menu_content_txt6").hover(function(){
+          $(this).toggleClass("menu_content_txt_hover");
+          $(".line_between6").toggleClass("line_between_hover");
+          $(this).css("cursor","pointer"); });
+            //ONCLICK MOVE TO DIV
+        $(".menu_content_txt6").click(function(){
+          $.scrollTo($(".slider_style"), 500);  });
+            //HOVER ARROW AND YELLOW CIRCLE
+        $(".choose_circle").hover(function() {
+          $(".arrow_img").toggleClass("arrow_connect_hover"); });
+            //HOVER ARROW AND YELLOW CIRCLE
+        $(".reload_shedule, .reload_shedule_m").hover(function() {
+          $(".reload_icon").toggleClass("reload_icon_hover"); });
+        $(".reload_shedule, .reload_shedule_m").click(function() {
+          location.reload();
+          $.scrollTo($("body"), 500); });
+        });
+    </script>
+    <script type="text/javascript" name="site_navigation">
+      //SHOW/HIDE NAVBAR ON SCROLL FUNCTION
+      $(document).ready(function() {
+        //DESKTOP MENU & NAVBAR SECTION
+        $(window).scroll(function() {
+          if($(this).scrollTop() > 600) {
+            $(".nav_menu_style").removeClass("hide_navbar");
+            $(".menu_content_style").addClass("menu_content_style_show");
+          } else {
+            $(".nav_menu_style").addClass("hide_navbar"); 
+            $(".menu_content_style").removeClass("menu_content_style_show"); }
+        });
+        //MOBILE MENU & NAVBAR SECTION
+        $(window).scroll(function() {
+          if($(this).scrollTop() < 1800) {
+            $(".mobile_header").removeClass("hide_mobile_header");
+            $(".menu_content_style_m").removeClass("menu_content_style_show_m");
+          } else {
+            $(".mobile_header").addClass("hide_mobile_header");
+            $(".menu_content_style_m").addClass("menu_content_style_show_m"); }
+        });
+      });
+    </script>
+    <script type="text/javascript"  name="buttons_site_navigation">
+      $(document).ready(function() {    
+        $.scrollTo(0); //SCROLL RESET
+        var $bodyWidth = $("body");
+        var $retToTop = $(".back_to_top");
+            //SCROLL TO CHOOSE MENU (UP)
+        $(".scrollTo_button_upper").click(function() {
+          if($bodyWidth.width() > 1200) {
+            $.scrollTo($(".menu_content_style"), 500);
+          } else {
+            $.scrollTo($(".arrow_bottom_nav"), 500); }
+        });
+            //SCROLL TO BOTTOM INFOGRAPHICS CONTENT (DOWN)
+        $(".arrow_bottom_nav").click(function() {
+          $.scrollTo($(".bottom_content"), 500); 
+        });
+            //SCROLL TO BODY (BUTTON)
+        $($retToTop).click(function() {
+          $.scrollTo($("body"), 500); 
+        });    
+      });
+            //SHOW/HIDE (BUTTON)
+      $(window).scroll(function() {
+            //VARIABLES DECLARATION
+        var $buttonD = $(".return_top_button_desktop");
+        var $buttonM = $(".return_top_button_mobile");
+        var $bodyWidth = $("body");
+            //FOR RESPONSIVE PAGE WHEN "BODY" > 1200wh
+        if($bodyWidth.width() > 1200) {
+          if($(window).scrollTop() > 300) { 
+            $($buttonD).addClass("back_top_activeD");
+          } else {
+            $($buttonD).removeClass("back_top_activeD"); }
+            //FOR RESPONSIVE PAGE WHEN "BODY" < 1200wh && <= 1200wh
+        } else {
+          if($(window).scrollTop() < 800) { 
+            $($buttonM).removeClass("back_top_activeM");
+          } else {
+            $($buttonM).addClass("back_top_activeM"); } 
+        }
+      }); 
+    </script>
+    <script type="text/javascript"  name="subjects_onclick_action">
+      $(document).ready(function() {
+            //SUBJECT VARIABLES DECLARATION
+        var $amial = $("#amial_choose");
+        var $amialEls = $("#asc_choose,#pi_choose,#tuc_choose,#pe_choose, #ppk_choose,#paipsi_choose,#eng_choose");
+        var $asc = $("#asc_choose");
+        var $ascEls = $("#amial_choose,#pi_choose,#tuc_choose,#pe_choose, #ppk_choose,#paipsi_choose,#eng_choose");  
+        var $pi = $("#pi_choose"); 
+        var $piEls = $("#amial_choose,#asc_choose,#tuc_choose,#pe_choose, #ppk_choose,#paipsi_choose,#eng_choose"); 
+        var $tuc = $("#tuc_choose"); 
+        var $tucEls = $("#amial_choose,#asc_choose,#pi_choose,#pe_choose, #ppk_choose,#paipsi_choose,#eng_choose");
+        var $pe = $("#pe_choose"); 
+        var $peEls = $("#amial_choose,#asc_choose,#pi_choose,#tuc_choose, #ppk_choose,#paipsi_choose,#eng_choose");
+        var $ppk = $("#ppk_choose"); 
+        var $ppkEls = $("#amial_choose,#asc_choose,#pi_choose,#tuc_choose, #pe_choose,#paipsi_choose,#eng_choose");
+        var $paipsi = $("#paipsi_choose"); 
+        var $paipsiEls = $("#amial_choose,#asc_choose,#pi_choose,#tuc_choose, #pe_choose,#ppk_choose,#eng_choose"); 
+        var $eng = $("#eng_choose"); 
+        var $engEls = $("#amial_choose,#asc_choose,#pi_choose,#tuc_choose, #pe_choose,#ppk_choose,#paipsi_choose");
+            //ICON SUBJECT VARIABLES DECLARATION
+        var $amialIco = $("#amial_ico");
+        var $amialIcoEls = $("#asc_ico,#pi_ico,#tuc_ico,#pe_ico,#ppk_ico,#paipsi_ico,#eng_ico");
+        var $ascIco = $("#asc_ico");
+        var $ascIcoEls = $("#amial_ico,#pi_ico,#tuc_ico,#pe_ico,#ppk_ico,#paipsi_ico,#eng_ico");
+        var $piIco = $("#pi_ico");
+        var $piIcoEls = $("#amial_ico,#asc_ico,#tuc_ico,#pe_ico,#ppk_ico,#paipsi_ico,#eng_ico"); 
+        var $tucIco = $("#tuc_ico");
+        var $tucIcoEls = $("#amial_ico,#asc_ico,#pi_ico,#pe_ico,#ppk_ico,#paipsi_ico,#eng_ico");
+        var $peIco = $("#pe_ico");
+        var $peIcoEls = $("#amial_ico,#asc_ico,#pi_ico,#tuc_ico,#ppk_ico,#paipsi_ico,#eng_ico"); 
+        var $ppkIco = $("#ppk_ico");
+        var $ppkIcoEls = $("#amial_ico,#asc_ico,#pi_ico,#tuc_ico,#pe_ico,#paipsi_ico,#eng_ico"); 
+        var $paipsiIco = $("#paipsi_ico");
+        var $paipsiIcoEls = $("#amial_ico,#asc_ico,#pi_ico,#tuc_ico,#pe_ico,#ppk_ico,#eng_ico");
+        var $engIco = $("#eng_ico");
+        var $engIcoEls = $("#amial_ico,#asc_ico,#pi_ico,#tuc_ico,#pe_ico,#paipsi_ico,#ppk_ico");
+             //AMIAL
+        $($amial).click(function() {
+          $(this).css("color","white");
+          $($amialEls).css("color","darkgray");  
+            $(".p_button1").addClass("active_button");
+            $(".p_button2, .p_button3, .p_button4, .p_button5, .p_button6, .p_button7, .p_button8").removeClass("active_button");
+          $($amialIco).css("color","white");
+          $($amialIcoEls).css("color","darkgray");
+            $(".amial_d").show(500);
+            $(".asc_d, .pi_d, .tuc_d, .pe_d, .ppk_d, .paipsi_d, .eng_d").hide(500);
+        });
+             //ASC
+        $($asc).click(function() {
+          $(this).css("color","white");
+          $($ascEls).css("color","darkgray");
+            $(".p_button2").addClass("active_button");
+            $(".p_button1, .p_button3, .p_button4, .p_button5, .p_button6, .p_button7, .p_button8").removeClass("active_button");      
+          $($ascIco).css("color","white");
+          $($ascIcoEls).css("color","darkgray");
+            $(".asc_d").show(500);
+            $(".amial_d, .pi_d, .tuc_d, .pe_d, .ppk_d, .paipsi_d, .eng_d").hide(500);
+        });
+            //PI
+        $($pi).click(function() {
+          $(this).css("color","white");
+          $($piEls).css("color","darkgray");
+            $(".p_button3").addClass("active_button");
+            $(".p_button1, .p_button2, .p_button4, .p_button5, .p_button6, .p_button7, .p_button8").removeClass("active_button");
+          $($piIco).css("color","white");
+          $($piIcoEls).css("color","darkgray");
+            $(".pi_d").show(500);
+            $(".amial_d, .asc_d, .tuc_d, .pe_d, .ppk_d, .paipsi_d, .eng_d").hide(500);
+        });
+            //TUC
+        $($tuc).click(function() {
+          $(this).css("color","white");
+          $($tucEls).css("color","darkgray");
+            $(".p_button4").addClass("active_button");
+            $(".p_button1, .p_button2, .p_button3, .p_button5, .p_button6, .p_button7, .p_button8").removeClass("active_button"); 
+          $($tucIco).css("color","white");
+          $($tucIcoEls).css("color","darkgray");
+            $(".tuc_d").show(500);
+            $(".amial_d, .asc_d, .pi_d, .pe_d, .ppk_d, .paipsi_d, .eng_d").hide(500);
+        });
+            //PE
+        $($pe).click(function() {
+          $(this).css("color","white");
+          $($peEls).css("color","darkgray");
+            $(".p_button5").addClass("active_button");
+            $(".p_button1, .p_button2, .p_button3, .p_button4, .p_button6, .p_button7, .p_button8").removeClass("active_button"); 
+          $($peIco).css("color","white");
+          $($peIcoEls).css("color","darkgray");
+            $(".pe_d").show(500);
+            $(".amial_d, .asc_d, .tuc_d, .pi_d, .ppk_d, .paipsi_d, .eng_d").hide(500);
+        });
+            //PPK
+        $($ppk).click(function() {
+          $(this).css("color","white");
+          $($ppkEls).css("color","darkgray");
+            $(".p_button6").addClass("active_button");
+            $(".p_button1, .p_button2, .p_button3, .p_button4, .p_button5, .p_button7, .p_button8").removeClass("active_button"); 
+          $($ppkIco).css("color","white");
+          $($ppkIcoEls).css("color","darkgray");
+            $(".ppk_d").show(500);
+            $(".amial_d, .asc_d, .tuc_d, .pi_d, .pe_d, .paipsi_d, .eng_d").hide(500);
+        });
+           //PAIPSI
+        $($paipsi).click(function() {
+          $(this).css("color","white");
+          $($paipsiEls).css("color","darkgray");
+            $(".p_button7").addClass("active_button");
+            $(".p_button1, .p_button2, .p_button3, .p_button4, .p_button5, .p_button6, .p_button8").removeClass("active_button"); 
+          $($paipsiIco).css("color","white");
+          $($paipsiIcoEls).css("color","darkgray");
+            $(".paipsi_d").show(500);
+            $(".amial_d, .asc_d, .tuc_d, .pi_d, .pe_d, .ppk_d, .eng_d").hide(500);
+        });
+           //ENG
+        $($eng).click(function() {
+          $(this).css("color","white");
+          $($engEls).css("color","darkgray");
+            $(".p_button8").addClass("active_button");
+            $(".p_button1, .p_button2, .p_button3, .p_button4, .p_button5, .p_button6, .p_button7").removeClass("active_button"); 
+          $($engIco).css("color","white");
+          $($engIcoEls).css("color","darkgray");
+            $(".eng_d").show(500);
+            $(".amial_d, .asc_d, .tuc_d, .pi_d, .pe_d, .ppk_d, .paipsi_d").hide(500);
+        });
+      });    
+    </script>
+      <script type="text/javascript" name="loading_value">
+        $(document).ready(function() {
+          $(".choose_circle").click(function() {
+            $.scrollTo($(".shedule_title"), 300);
+            $(".show_before_shedule_gen_txt").each(function() {
+              var text = $(this).text();
+              $(this).text(text.replace('Ale co tu tak pusto BibleThump :(Wróć na górę strony i wygeneruj swój spersonalizowany plan.', 'Daj mi chwilę, zbieram dane z tajnych serwerów politechniki...'));    
+            });
+            $(".show_before_shedule_gen_img").attr("src", "gifs/satelite_anim.gif")  ;
+            $(".shedule_pre_txt_field").delay(2700).hide(0);
+            $(".shedule_content").delay(2700).show(0);          
+          });  
+        });
+      </script>
+    <script type="text/javascript" name="pop_up_shedule_info">
+      $(document).ready(function() {
+            //MONDAY
+        $(".paipsi_info").click(function() {
+          $(".pop_up_m_paipsi").slideToggle(); }); 
+        $(".pe_cw_info1").click(function() {
+          $(".pop_up_m_pe_cw_gr1").slideToggle(); });  
+        $(".pe_cw_info2").click(function() {
+          $(".pop_up_m_pe_cw_gr2").slideToggle(); });
+        $(".pi_lab_info2_1").click(function() {
+          $(".pop_up_m_pi_lab_gr2_1").slideToggle(); });
+        $(".pi_lab_info1_2").click(function() {
+          $(".pop_up_m_pi_lab_gr1_2").slideToggle(); }); 
+        $(".eng_cw_infob2a").click(function() {
+          $(".pop_up_m_eng_cw_grb2a").slideToggle(); });
+            //TUESDAY
+        $(".pi_wyk_info").click(function() {
+          $(".pop_up_m_pi_wyk").slideToggle(); });
+        $(".pi_lab_info1_1").click(function() {
+          $(".pop_up_m_pi_lab_gr1_1").slideToggle(); });
+        $(".pi_lab_info2_2").click(function() {
+          $(".pop_up_m_pi_lab_gr2_2").slideToggle(); });
+            //WEDNESDAY
+        $(".amial_cw_info").click(function() {
+          $(".pop_up_m_amial_cw").slideToggle(); });
+        $(".amial_wyk_info").click(function() {
+          $(".pop_up_m_amial_wyk").slideToggle(); });
+        $(".pe_wyk_info").click(function() {
+          $(".pop_up_m_pe_wyk").slideToggle(); });
+            //THURSDAY
+        $(".wf_info").click(function() {
+          $(".pop_up_m_wf").slideToggle(); });
+        $(".pi_cw_info2").click(function() {
+          $(".pop_up_m_pi_cw_gr2").slideToggle(); });        
+            //FRIDAY
+        $(".eng_cw_infoc1a").click(function() {
+          $(".pop_up_m_eng_cw_grc1a").slideToggle(); });
+        $(".eng_cw_infob2b").click(function() {
+          $(".pop_up_m_eng_cw_grb2b").slideToggle(); });
+        $(".eng_cw_infoc1b").click(function() {
+          $(".pop_up_m_eng_cw_grc1b").slideToggle(); });
+        $(".pi_cw_info1").click(function() {
+          $(".pop_up_m_pi_cw_gr1").slideToggle(); });    
+      });  
+    </script>
+    <script type="text/javascript" name="date_variables">
+      var today = new Date();
+      var day = today.getDate();
+      var month = today.getMonth()+1;
+      var year = today.getFullYear();
+      var dayN = today.getDay();
+    </script>
+  </head>
+<body>
+      <!--COOKIES NOTIFICATION--> 
+  <div id="simplecookienotification_v01">
+    <div class="container-fluid">
+      <div class="row justify-content-center cookie_content">
+        <div class="col-xl-6">
+          <span>W celu optymalizacji treści i wygody użytkowania, strona którą przeglądasz korzysta z plików Cookies zapisanych na Twoim urządzeniu. Pliki Cookies możesz kontrolować za pomocą ustawień swojej przeglądarki internetowej. Dalsze korzystanie ze strony, bez zmiany ustawień przeglądarki, oznacza że akceptujesz stosowanie polityki plików Cookies.</span>
+        </div>
+      <div class="col-xl-5 button_cookie_content">  
+        <a class="cookie_button1" id="simplecookienotification_v01_polityka" target="_blank" href="cookies.html">Polityka Prywatności</a>
+        <a class="cookie_button2" id="okbutton" href="javascript:simplecookienotification_v01_create_cookie('simplecookienotification_v01',1,7);">Zgadzam się z polityką Cookies</a>
+      </div>
+    </div>
+  </div>
+</div>
+ <script type="text/javascript" name="cookies_array">
+   var galTable= new Array(); 
+   var galx = 0;
+ </script>
+   <script type="text/javascript" name="cookies_notification">
+     function simplecookienotification_v01_create_cookie(name,value,days) { 
+       if (days) { 
+         var date = new Date(); 
+         date.setTime(date.getTime()+(days*24*60*60*1000)); 
+         var expires = "; expires="+date.toGMTString(); 
+       } else { 
+         var expires = ""; } 
+         document.cookie = name+"="+value+expires+"; path=/"; document.getElementById("simplecookienotification_v01").style.display = "none"; } 
+     function simplecookienotification_v01_read_cookie(name) { 
+       var nameEQ = name + "="; 
+       var ca = document.cookie.split(";"); 
+         for(var i=0;i < ca.length;i++) { 
+           var c = ca[i]; 
+           while (c.charAt(0)==" ") c = c.substring(1,c.length); 
+             if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length); 
+           } return null;
+     }
+     var simplecookienotification_v01_jest = simplecookienotification_v01_read_cookie("simplecookienotification_v01");
+     if(simplecookienotification_v01_jest == 1) { 
+         document.getElementById("simplecookienotification_v01").style.display = "none"; 
+     }
+  </script>
+      <!--THIS HTML, CSS AND JAVASCRIPT (INCLUDING JQUERY) CODE IS OWNED BY MIŁOSZ GILGA. COPYRIGHT 2020-2021 BY MIŁOSZ GILGA.-->
+        <!--NAVIGATION ARROW (SCROLL TO UP)--> 
+    <nav name="page_up_buttons">
+      <div name="return_top_buttonD" class="return_top_button_desktop back_to_top">
+        <i class="fas fa-arrow-up arrow_return_style"></i>    
+      </div>
+        <div name="return_top_buttonM" class="return_top_button_mobile back_to_top">
+          <i class="fas fa-arrow-up arrow_return_style"></i>
+        </div> 
+      </nav>
+        <!--MENU MOBILE ONLY POP UP SHOW/HIDE--> 
+    <div class="mobile_header">
+      <div class="hamburger_bars2">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>    
+      </div>
+        <p class="title_menu_m">INFORMATYKA&nbsp;<span style="color:#919191;">RE</span></p>
+    </div>
+    <nav class="menu_content_style_m" name="popup_menu_mobile" style="padding-bottom:80px !important;"> 
+      <div class="menu_content_txt_head">MENU</div><br><br><br>
+        <a href="main" target="_blank" class="hover_menu_content">
+          <div class="menu_content_txt1" style="margin:0 !important;">Interaktywny plan zajęć
+            <div class="line_between1"></div>
+              <i class="fas fa-book-open menu_icon"></i>
+            </div>
+        </a>
+            <a href="work-in-progress" target="_blank" class="hover_menu_content">
+              <div class="menu_content_txt2">Kalendarz z ważnymi datami
+                <div class="line_between2"></div>
+                  <i class="far fa-calendar-alt menu_icon"></i>
+              </div>
+            </a>
+        <a href="work-in-progress" target="_blank" class="hover_menu_content">
+          <div class="menu_content_txt3">Warunki zaliczenia przedmiotów
+            <div class="line_between3"></div>
+              <i class="fas fa-calculator menu_icon"></i>
+          </div>
+        </a>
+            <a href="work-in-progress" target="_blank" class="hover_menu_content">
+              <div class="menu_content_txt4">Pomoce naukowe
+                <div class="line_between4"></div>
+                  <i class="fas fa-lightbulb menu_icon"></i>
+                </div>
+            </a>
+        <a href="http://www.elektr.polsl.pl/" target="_blank" class="hover_menu_content">
+          <div class="menu_content_txt5" style="margin:0 !important;padding-bottom:127px;">Oficjalna strona wydziału
+            <div class="line_between5"></div>
+              <i class="fas fa-globe-asia menu_icon"></i>
+          </div>
+        </a>
+     </nav>
+         <!--MENU DESKTOP ONLY POP UP SHOW/HIDE-->
+    <nav class="menu_content_style" name="popup_menu_desktop"> 
+      <div class="menu_content_txt_head">MENU</div><br><br><br>
+        <a href="main" target="_blank" class="hover_menu_content">
+          <div class="menu_content_txt1" style="margin:0 !important;">Interaktywny plan zajęć
+            <div class="line_between1"></div>
+              <i class="fas fa-book-open menu_icon"></i>
+            </div>
+        </a>
+            <a href="work-in-progress.html" target="_blank" class="hover_menu_content">
+              <div class="menu_content_txt2">Kalendarz z ważnymi datami
+                <div class="line_between2"></div>
+                  <i class="far fa-calendar-alt menu_icon"></i>
+              </div>
+            </a>
+        <a href="work-in-progress" target="_blank" class="hover_menu_content">
+          <div class="menu_content_txt3">Warunki zaliczenia przedmiotów
+            <div class="line_between3"></div>
+              <i class="fas fa-calculator menu_icon"></i>
+          </div>
+        </a>
+            <a href="work-in-progress" target="_blank" class="hover_menu_content">
+              <div class="menu_content_txt4">Pomoce naukowe
+                <div class="line_between4"></div>
+                  <i class="fas fa-lightbulb menu_icon"></i>
+                </div>
+            </a>
+        <a href="http://www.elektr.polsl.pl/" target="_blank" class="hover_menu_content">
+          <div class="menu_content_txt5">Oficjalna strona wydziału
+            <div class="line_between5"></div>
+              <i class="fas fa-globe-asia menu_icon"></i>
+          </div>
+        </a>
+            <a target="_blank" class="hover_menu_content">
+              <div class="menu_content_txt6" style="margin:0 !important;padding-bottom:127px;">Linki do Platformy Zdalnej Edukacji
+                <div class="line_between6"></div>
+                  <i class="fas fa-chalkboard-teacher menu_icon"></i>
+                </div>
+            </a>
+     </nav>
+           <!--MAIN CONTENT-->
+    <main class="container-fluid" style="padding:0;">
+      <div class="row">
+           <!--PART 1 MAIN CONTENT (LEFT NAVIGATION BAR)-->
+        <div class="col-xl-8" style="padding:0;height:auto !important;">
+          <header name="main_navigation_menu" class="nav_menu_style hide_navbar">
+            <p class="title_menu">INFORMATYKA&nbsp;<span style="color:#919191;">RE</span></p>
+              <nav name="left_menu">
+                <div class="hamburger_bars">
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>    
+                </div>
+              </nav>
+            </header>
+              <!--PART 2 MAIN CONTENT (TITLE AND DESCRIPTION)-->
+          <section name="bootstrap_col_1_2">
+            <article name="content_left" class="article_style1">      
+              <img class="image_logo_horizontal" src="css/logo.png" alt="politechnika_logo_H"/>
+              <img class="image_logo_vetical" src="css/logoH.png" alt="politechnika_logo_V"/>
+                <div class="text_below_logo">
+                  <hn name="title">Strona Internetowa dla studentów I roku<span style="color:#efaa15;"> INFORMATYKI</span> na wydziale<span style="color:#efaa15;"> ELEKTRYCZNYM</span>  Politechniki Śląskiej (2020/2021).</hn>
+                    <div class="line_between_main"></div>
+                      <i class="fas fa-graduation-cap menu_icon_main"></i>
+                    <div class="line_between_main"></div>
+                  <h5 name="description">
+                    Wybierz z dostępnych opcji swój przydział do grup i wygeneruj plan dla siebie! Aby nie musieć za każdym razem wybierać swojego przydziału grupowego należy <strong>włączyć pliki cookies</strong> w przeglądarce. Dzięki temu, gdy kolejnym razem wejdziesz na stronę z tego samego urządzenia, wystarczy że klikniesz <strong>"generuj swój osobisty plan"</strong>, a opcje jakie ostatnio zaznaczyłeś pozostaną <strong>niezmienione.</strong>
+                  </h5>
+                </div>
+              <div class="arrow_bottom_nav"><i class="fas fa-sort-down arrow_down"></i></div> 
+            </article>
+          </section>
+        </div>
+              <!--PART 3 MAIN (RIGHT) CONTENT (CHOOSE)-->
+        <div class="col-xl-3" style="padding:0;margin-bottom:70px !important;">
+          <section name="bootstrap_col_2_2" class="choosing_menu_style_main scrollTo_choose">
+            <div class="group_divide1" style="margin-top:20px;">
+              <h4>PRZYDZIAŁ GRUPY OGÓLNEJ</h4>
+                <div class="line_between_group"></div>
+                  <i class="fas fa-users menu_icon_group"></i>
+                <div class="line_between_group"></div>
+                  <div style="clear:both"></div>
+                <label class="group_first_main">
+                  <div class="group_first_main">
+                    <input type="radio" name="cb1" id="cb1" value="y" onChange="changeChoice1(this, 'choice1_col')"/>PIERWSZA
+                  </div> 
+                </label> 
+              <label class="group_second_main">
+                <div class="group_second_main">
+                  <input type="radio" name="cb1" id="cb2" value="y" onChange="changeChoice1(this, 'choice2_col')"/>DRUGA
+                </div>
+              </label>
+             </div>
+               <div class="group_divide1" style="margin-top:40px!important;">
+                 <h4>PRZYDZIAŁ GRUPY PI:</h4>
+                   <div class="line_between_group"></div>
+                     <i class="fas fa-users menu_icon_group"></i>
+                   <div class="line_between_group"></div>
+                     <div style="clear:both"></div>
+                 <label class="group_first_pi">
+                   <div class="group_first_pi">
+                     <input type="radio" name="cb2" id="cb3" value="y" onChange="changeChoice2(this, 'choice3_col')"/>1/1
+                   </div> 
+                 </label> 
+                   <label class="group_second_pi">
+                     <div class="group_second_pi">
+                       <input type="radio" name="cb2" id="cb4" value="y" onChange="changeChoice2(this, 'choice4_col')"/>1/2
+                     </div> 
+                   </label>
+                 <label class="group_third_pi">
+                   <div class="group_third_pi">
+                     <input type="radio" name="cb2" id="cb5" value="y" onChange="changeChoice2(this, 'choice5_col')"/>2/1
+                   </div> 
+                 </label> 
+                   <label class="group_fourth_pi">
+                     <div class="group_fourth_pi">
+                       <input type="radio" name="cb2" id="cb6" value="y" onChange="changeChoice2(this, 'choice6_col')"/>2/2
+                     </div> 
+                   </label>  
+               </div>
+               <div class="group_divide1" style="margin-top:40px!important;margin-bottom:90px !important;">
+                 <h4>PRZYDZIAŁ GRUPY Z JĘZYKA ANGIELSKIEGO:</h4>
+                   <div class="line_between_group"></div>
+                     <i class="fas fa-users menu_icon_group"></i>
+                   <div class="line_between_group"></div>
+                     <div style="clear:both"></div>
+                 <label class="group_first_eng">
+                   <div class="group_first_eng">
+                     <input type="radio" name="cb3" id="cb7" value="y" onChange="changeChoice3(this, 'choice7_col')"/>B2 A
+                   </div> 
+                 </label> 
+                   <label class="group_second_eng">
+                     <div class="group_second_eng">
+                       <input type="radio" name="cb3" id="cb8" value="y" onChange="changeChoice3(this, 'choice8_col')"/>B2 B
+                     </div> 
+                   </label>
+                 <label class="group_third_eng">
+                   <div class="group_third_eng">
+                     <input type="radio" name="cb3" id="cb9" value="y" onChange="changeChoice3(this, 'choice9_col')"/>C1 A
+                   </div> 
+                 </label> 
+                   <label class="group_fourth_eng">
+                     <div class="group_fourth_eng">
+                       <input type="radio" name="cb3" id="cb10" value="y" onChange="changeChoice3(this, 'choice10_col')"/>C1 B
+                     </div> 
+                   </label>  
+               </div>
+          </section>
+                 <!--PART 3 MAIN (RIGHT) CONTENT (ARROW AND CHOOSE HYPERTXT)-->
+              <div class="choose_circle"><i class="fas fa-edit"></i></div>
+            <div name="arrow_and_description" class="arrow_img_and_title">
+                <img class="arrow_img" src="css/arrow.png" alt="arrow_indicator"/>
+              </div>
+            </div>
+              <!--BOTTOM FIRST CONTENT (INFORMATION)-->
+        <div class="col-xl-12 bottom_content" style="padding:60px;">
+          <section class="row justify-content-center" name="information_blocks" style="margin-top:60px !important;">
+            <div class="col-xl-3 information_block_style">
+              <div class="row">
+                <div class="col-xl-5" style="padding:0 !important;">
+                  <img class="description_icon_image" src="css/shedule_icon.png" alt="shedule_icon"/>
+                </div>
+              <div class="col-xl-7" style="padding:0 !important;">
+                <h3>Interaktywny<br>plan zajęć</h3>
+                  <p class="description__">Przejrzysty i interaktywny harmonogram spotkań dopasowany do konretnej grupy.</p>
+                </div>
+              </div>
+                <div class="information_hipertxt"><a style="color:white;" href="main">PRZEJDŹ</a></div>
+            </div>
+            <div class="col-xl-3 information_block_style">
+              <div class="row">
+                <div class="col-xl-5" style="padding:0 !important;">
+                  <img class="description_icon_image" src="css/calendar_icon.png" alt="calendar_icon"/>
+                </div>
+              <div class="col-xl-7" style="padding:0 !important;">
+                <h3>Kalendarz<br>studenta</h3>
+                  <p class="description__">Nowoczesny kalendarz z najważniejszymi datami zaliczeń i dni wolnych od nauki.</p>
+                </div>
+              </div>
+                <div class="information_hipertxt"><a style="color:white;" target="_blank" href="work-in-progress">PRZEJDŹ</a></div>
+            </div>
+            <div class="col-xl-3 information_block_style">
+              <div class="row">
+                <div class="col-xl-5" style="padding:0 !important;">
+                  <img class="description_icon_image" src="css/graduate_icon.png" alt="graduate_icon"/>
+                </div>
+              <div class="col-xl-7" style="padding:0 !important;">
+                <h3>Warunki zaliczenia<br>przedmiotów</h3>
+                  <p class="description__">Szczegółowy opis wymagań niezbędnych do uzyskania zaliczenia z danego przedmiotu.</p>
+                </div>
+              </div>
+                <div class="information_hipertxt"><a style="color:white;" target="_blank" href="work-in-progress">PRZEJDŹ</a></div>
+            </div>
+            <div class="col-xl-3 information_block_style">
+              <div class="row">
+                <div class="col-xl-5" style="padding:0 !important;">
+                  <img class="description_icon_image" src="css/bulb_icon.png" alt="bulb_icon"/>
+                </div>
+              <div class="col-xl-7" style="padding:0 !important;">
+                <h3>Pomoce<br>naukowe</h3>
+                  <p class="description__">Pod tym linkiem znajdziesz pomoce do nauki obejmujące materiał z zajęć.</p>
+                </div>
+              </div>
+                <div class="information_hipertxt"><a style="color:white;" target="_blank" href="work-in-progress">PRZEJDŹ</a></div>
+            </div>
+            <div class="col-xl-3 information_block_style">
+              <div class="row">
+                <div class="col-xl-5" style="padding:0 !important;">
+                  <img class="description_icon_image" src="css/website_icon.png" alt="website_icon"/>
+                </div>
+              <div class="col-xl-7" style="padding:0 !important;">
+                <h3>Oficjalna strona<br>wydziału</h3>
+                  <p class="description__">Znajdziesz tam aktualności, ogłoszenia i wydarzenia z życia wydziału Elektrycznego.</p>
+                </div>
+              </div>
+                <div class="information_hipertxt"><a style="color:white;" target="_blank" href="https://www.elektr.polsl.pl/">PRZEJDŹ</a></div>
+            </div>
+               <!--BOTTOM SECOND CONTENT (SHEDULE HEADER INFORMATION)-->
+          <header name="header_shedule_section" class="shedule_title">
+            <div class="line_between_main_bottom">
+              <i class="fas fa-calendar-alt icon_main_bottom"></i></div>
+                <h1>Twój plan zajęć:</h1>
+              </header>
+               <!--END OF SECOND CONTENT SECTION-->
+            </section>
+          </div>
+        </div>
+      </main>
+    <!--SHEDULE SECTION-->
+    <div class="container-fluid" style="padding:0 !important;">
+      <div class="row justify-content-center">
+        <div class="shedule_content" style="display:none;" id="shedule_pdf_gen">
+          <div class="shedule_groups">
+            <div class="row justify-content-center">
+               <div class="col-xl-2 monday">
+                 <header class="monday_title">Poniedziałek</header>
+                       <!--PAIPSI MONDAY SECTION
+                   <div class="_mondaycontent all">
+                     <div class="specific_shedule">WYKŁAD</div>
+                     <span>Prawo Autorskie i Problemy Społeczne Informatyki</span>
+                     <div class="separate_title_hour"><i class="far fa-clock separate_icon"></i></div>
+                     <div>8:00 - 9:30</div>
+                     <i class="fas fa-info-circle info_icon_shedule paipsi_info"></i>
+                       <div class="pop_up_m_paipsi" style="display: none;">
+                         <div class="pop_up_window_one">Wykłady odbywają się na platformie <span style="color:#efaa15">Big Blue Button</span>,<br>(linki znajdują się na PZE).</div>
+                         <div class="pop_up_window_button1">
+                           <a style="color:white" target="_blank" href="https://platforma.polsl.pl/re/course/view.php?id=879">Przejdź do PZE</a>
+                         </div>
+                         <div class="pop_up_window_button2">
+                           <a style="color:white" target="_blank" href="work-in-progress">Warunki zalicznia Przedmiotu</a>
+                         </div>
+                       </div>
+                   </div>
+                     <!--PE GR1 MONDAY SECTION
+                 <div class="_mondaycontent group_1">
+                   <div class="specific_shedule">ĆWICZENIA</div>
+                   <span>Podstawy Elektrotechniki</span>
+                   <div class="separate_title_hour"><i class="far fa-clock separate_icon"></i></div>
+                   <div>10:00 - 11:30</div>
+                   <i class="fas fa-info-circle info_icon_shedule pe_cw_info1"></i>
+                     <div class="pop_up_m_pe_cw_gr1" style="display: none;">
+                       <div class="pop_up_window_one">Ćwiczenia odbywają się na platformie <span style="color:#efaa15">Zoom</span>,<br>(linki znajdują się na PZE).</div>
+                       <div class="pop_up_window_button1">
+                         <a style="color:white" target="_blank" href="https://platforma.polsl.pl/re/course/view.php?id=890">Przejdź do PZE</a>
+                       </div>
+                       <div class="pop_up_window_button2">
+                         <a style="color:white" target="_blank" href="work-in-progress">Warunki zalicznia Przedmiotu</a>
+                       </div>
+                     </div>
+                 </div>
+                       <!--PE GR2 MONDAY SECTION
+                   <div class="_mondaycontent group_2">
+                     <div class="specific_shedule">ĆWICZENIA</div>
+                     <span>Podstawy Elektrotechniki</span>
+                     <div class="separate_title_hour"><i class="far fa-clock separate_icon"></i></div>
+                     <div>10:00 - 11:30</div>
+                     <i class="fas fa-info-circle info_icon_shedule pe_cw_info2"></i>
+                       <div class="pop_up_m_pe_cw_gr2" style="display: none;">
+                         <div class="pop_up_window_one">Ćwiczenia odbywają się na platformie <span style="color:#efaa15">Microsoft&reg; Teams</span>,<br>(linki znajdują się na PZE).</div>
+                         <div class="pop_up_window_button1">
+                           <a style="color:white" target="_blank" href="https://platforma.polsl.pl/re/course/view.php?id=890">Przejdź do PZE</a>
+                         </div>
+                         <div class="pop_up_window_button2">
+                           <a style="color:white" target="_blank" href="work-in-progress">Warunki zalicznia Przedmiotu</a>
+                         </div>
+                       </div>
+                   </div>
+                     <!--PI 2_1 MONDAY SECTION
+                 <div class="_mondaycontent group_pi2_1">
+                   <div class="specific_shedule">LABOLATORIA</div>
+                   <span>Podstawy Informatyki</span>
+                   <div class="separate_title_hour"><i class="far fa-clock separate_icon"></i></div>
+                   <div>12:00 - 15:00</div>
+                   <i class="fas fa-info-circle info_icon_shedule pi_lab_info2_1"></i>
+                     <div class="pop_up_m_pi_lab_gr2_1" style="display: none;">
+                       <div class="pop_up_window_one">Labolatoria odbywają się na platformie <span style="color:#efaa15">Zoom</span>,<br>(linki znajdują się na PZE).</div>
+                       <div class="pop_up_window_button1">
+                         <a style="color:white" target="_blank" href="https://platforma.polsl.pl/re/course/view.php?id=898">Przejdź do PZE</a>
+                       </div>
+                       <div class="pop_up_window_button2">
+                         <a style="color:white" target="_blank" href="work-in-progress">Warunki zalicznia Przedmiotu</a>
+                       </div>
+                     </div>
+                 </div>-->
+                       <!--ENGLISH B2A MONDAY SECTION
+                   <div class="_mondaycontent group_b2a">
+                     <div class="specific_shedule">ĆWICZENIA</div>
+                     <span>Język Angielski</span>
+                     <div class="separate_title_hour"><i class="far fa-clock separate_icon"></i></div>
+                     <div>13:30 - 15:00</div>
+                     <i class="fas fa-info-circle info_icon_shedule eng_cw_infob2a"></i>
+                       <div class="pop_up_m_eng_cw_grb2a" style="display: none;">
+                         <div class="pop_up_window_one">Ćwiczenia odbywają się na platformie <span style="color:#efaa15">Zoom</span>,<br>(linki znajdują się na PZE).</div>
+                         <div class="pop_up_window_button1">
+                           <a style="color:white" target="_blank" href="https://platforma.polsl.pl/rjo5/enrol/index.php?id=767">Przejdź do PZE</a>
+                         </div>
+                         <div class="pop_up_window_button2">
+                           <a style="color:white" target="_blank" href="work-in-progress">Warunki zalicznia Przedmiotu</a>
+                         </div>
+                       </div>
+                   </div>-->
+                      <!--PI 1_2 MONDAY SECTION
+                 <div class="_mondaycontent group_pi1_2">
+                   <div class="specific_shedule">LABOLATORIA</div>
+                   <span>Podstawy Informatyki</span>
+                   <div class="separate_title_hour"><i class="far fa-clock separate_icon"></i></div>
+                   <div>15:30 - 18:30</div>
+                   <i class="fas fa-info-circle info_icon_shedule pi_lab_info1_2"></i>
+                     <div class="pop_up_m_pi_lab_gr1_2" style="display: none;">
+                       <div class="pop_up_window_one">Labolatoria odbywają się na platformie <span style="color:#efaa15">Zoom</span>,<br>(linki znajdują się na PZE).</div>
+                       <div class="pop_up_window_button1">
+                         <a style="color:white" target="_blank" href="https://platforma.polsl.pl/re/course/view.php?id=898">Przejdź do PZE</a>
+                       </div>
+                       <div class="pop_up_window_button2">
+                         <a style="color:white" target="_blank" href="work-in-progress">Warunki zalicznia Przedmiotu</a>
+                       </div>
+                     </div>
+                 </div>
+                   <div class="separate monday_sep"></div>
+                 <!--END OF MONDAY SECTION-->
+           </div>
+               <!--START OF TUESDAY SECTION-->
+           <div class="col-xl-2 tuesday">
+             <header class="tuesday_title">Wtorek</header>
+                       <!--PI WYK TUESDAY SECTION
+               <div class="_tuesdaycontent all">
+                 <div class="specific_shedule">WYKŁAD</div>
+                 <span>Podstawy Informatyki</span>
+                 <div class="separate_title_hour"><i class="far fa-clock separate_icon"></i></div>
+                 <div>10:15 - 11:45</div>
+                 <i class="fas fa-info-circle info_icon_shedule pi_wyk_info"></i>
+                   <div class="pop_up_m_pi_wyk" style="display: none;">
+                     <div class="pop_up_window_one">Wykłady odbywają się na platformie <span style="color:#efaa15">Big Blue Button</span>,<br>(linki znajdują się na PZE).</div>
+                     <div class="pop_up_window_button1">
+                       <a style="color:white" target="_blank" href="https://platforma2.polsl.pl/rau2/course/view.php?id=908">Przejdź do PZE</a>
+                     </div>
+                     <div class="pop_up_window_button2">
+                       <a style="color:white" target="_blank" href="work-in-progress">Warunki zalicznia Przedmiotu</a>
+                     </div>
+                   </div>
+                 </div>
+                     <!--PI 2_2 TUESDAY SECTION
+                 <div class="_tuesdaycontent group_pi2_2">
+                   <div class="specific_shedule">LABOLATORIA</div>
+                   <span>Podstawy Informatyki</span>
+                   <div class="separate_title_hour"><i class="far fa-clock separate_icon"></i></div>
+                   <div>12:15 - 15:15</div>
+                   <i class="fas fa-info-circle info_icon_shedule pi_lab_info2_2"></i>
+                     <div class="pop_up_m_pi_lab_gr2_2" style="display: none;">
+                       <div class="pop_up_window_one">Labolatoria odbywają się na platformie <span style="color:#efaa15">Zoom</span>,<br>(linki znajdują się na PZE).</div>
+                       <div class="pop_up_window_button1">
+                         <a style="color:white" target="_blank" href="https://platforma.polsl.pl/re/course/view.php?id=898">Przejdź do PZE</a>
+                       </div>
+                       <div class="pop_up_window_button2">
+                         <a style="color:white" target="_blank" href="work-in-progress">Warunki zalicznia Przedmiotu</a>
+                       </div>
+                     </div>
+                 </div>-->
+                     <!--PI 1_1 TUESDAY SECTION
+                 <div class="_tuesdaycontent group_pi1_1">
+                   <div class="specific_shedule">LABOLATORIA</div>
+                   <span>Podstawy Informatyki</span>
+                   <div class="separate_title_hour"><i class="far fa-clock separate_icon"></i></div>
+                   <div>15:30 - 18:30</div>
+                   <i class="fas fa-info-circle info_icon_shedule pi_lab_info1_1"></i>
+                     <div class="pop_up_m_pi_lab_gr1_1" style="display: none;">
+                       <div class="pop_up_window_one">Labolatoria odbywają się na platformie <span style="color:#efaa15">Zoom</span>,<br>(linki znajdują się na PZE).</div>
+                       <div class="pop_up_window_button1">
+                         <a style="color:white" target="_blank" href="https://platforma.polsl.pl/re/course/view.php?id=898">Przejdź do PZE</a>
+                       </div>
+                       <div class="pop_up_window_button2">
+                         <a style="color:white" target="_blank" href="work-in-progress">Warunki zalicznia Przedmiotu</a>
+                       </div>
+                     </div>
+                 </div>
+                   <div class="separate tuesday_sep"></div>
+                   <!--END OF TUESDAY SECTION-->
+               </div>
+               <!--START OF WEDNESDAY SECTION-->
+           <div class="col-xl-2 wednesday">
+             <header class="wednesday_title">Środa</header>
+                   <!--AMIAL CW WEDNESDAY SECTION
+               <div class="_wednesdaycontent all">
+                 <div class="specific_shedule">ĆWICZENIA</div>
+                 <span>Analiza Matematyczna<br>i Algebra Liniowa</span>
+                 <div class="separate_title_hour"><i class="far fa-clock separate_icon"></i></div>
+                 <div>10:15 - 11:45<br>11:45 - 13:15</div>
+                 <i class="fas fa-info-circle info_icon_shedule amial_cw_info"></i>
+                   <div class="pop_up_m_amial_cw" style="display: none;">
+                     <div class="pop_up_window_one">Ćwiczenia odbywają się na platformie <span style="color:#efaa15">Microsoft&reg; Teams</span>,<br>(linki znajdują się na PZE).</div><br>
+                     <div class="specific_shedule">Ćwiczenia realizowane są w dwóch blokach (odpowiednio dla pierwszej i drugiej grupy), ale jest możliwość uczestniczenia w obu blokach.</div>
+                     <div class="pop_up_window_button1">
+                       <a style="color:white" target="_blank" href="https://platforma.polsl.pl/rms/course/view.php?id=124">Przejdź do PZE</a>
+                     </div>
+                     <div class="pop_up_window_button2">
+                       <a style="color:white" target="_blank" href="work-in-progress">Warunki zalicznia Przedmiotu</a>
+                     </div>
+                   </div>
+                 </div>
+                   <!--AMIAL WYK WEDNESDAY SECTION
+               <div class="_wednesdaycontent all">
+                 <div class="specific_shedule">WYKŁAD</div>
+                 <span>Analiza Matematyczna<br>i Algebra Liniowa</span>
+                 <div class="separate_title_hour"><i class="far fa-clock separate_icon"></i></div>
+                 <div>13:15 - 14:45</div>
+                 <i class="fas fa-info-circle info_icon_shedule amial_wyk_info"></i>
+                   <div class="pop_up_m_amial_wyk" style="display: none;">
+                     <div class="pop_up_window_one">Wykłady odbywają się na platformie <span style="color:#efaa15">Microsoft&reg; Teams</span>,<br>(linki znajdują się na PZE).</div>
+                     <div class="pop_up_window_button1">
+                       <a style="color:white" target="_blank" href="https://platforma.polsl.pl/rms/course/view.php?id=124">Przejdź do PZE</a>
+                     </div>
+                     <div class="pop_up_window_button2">
+                       <a style="color:white" target="_blank" href="work-in-progress">Warunki zalicznia Przedmiotu</a>
+                     </div>
+                   </div>
+                 </div>
+                   <!--PE WYK WEDNESDAY SECTION
+               <div class="_wednesdaycontent all">
+                 <div class="specific_shedule">WYKŁAD</div>
+                 <span>Podstawy Elektrotechniki</span>
+                 <div class="separate_title_hour"><i class="far fa-clock separate_icon"></i></div>
+                 <div>15:00 - 17:15</div>
+                 <i class="fas fa-info-circle info_icon_shedule pe_wyk_info"></i>
+                   <div class="pop_up_m_pe_wyk" style="display: none;">
+                     <div class="pop_up_window_one">Wykłady odbywają się na platformie <span style="color:#efaa15">Zoom</span>,<br>(linki znajdują się na PZE).</div>
+                     <div class="pop_up_window_button1">
+                       <a style="color:white" target="_blank" href="https://platforma.polsl.pl/re/course/view.php?id=890">Przejdź do PZE</a>
+                     </div>
+                     <div class="pop_up_window_button2">
+                       <a style="color:white" target="_blank" href="work-in-progress">Warunki zalicznia Przedmiotu</a>
+                     </div>
+                   </div>
+                 </div>
+                   <div class="separate wednesday_sep"></div>
+                   <!--END OF WEDNESDAY SECTION-->
+           </div>
+               <!--START OF THURSDAY SECTION-->
+           <div class="col-xl-2 thursday">
+             <header class="thursday_title">Czwartek</header>
+                   <!--WF CW THURSDAY SECTION
+               <div class="_thursdaycontent all" id="genPDF">
+                 <div class="specific_shedule">ZADANIE</div>
+                 <span>Wychowanie<br>Fizyczne</span>
+                 <div class="separate_title_hour"><i class="far fa-clock separate_icon"></i></div>
+                 <div>Cały dzień</div>
+                 <i class="fas fa-info-circle info_icon_shedule wf_info"></i>
+                   <div class="pop_up_m_wf" style="display: none;">
+                     <div class="pop_up_window_one">Zadanie pojawia się na grupie Facebook<br>
+                       <a style="color:#efaa15" href="https://www.facebook.com/groups/1411532599057398"><br>Grupa Pierwsza</a></div>
+                         <a style="color:#efaa15; font-size:18px" href="https://www.facebook.com/groups/1480510045473302">Grupa Druga</a>
+                     <div class="pop_up_window_button2">
+                       <a style="color:white" target="_blank" href="work-in-progress">Warunki zalicznia Przedmiotu</a>
+                     </div>
+                   </div>
+                 </div>
+                   <!--PI GR 2 CW THURSDAY SECTION
+               <div class="_fridaycontent group_2">
+                 <div class="specific_shedule">ĆWICZENIA</div>
+                 <span>Podstawy Informatyki</span>
+                 <div class="separate_title_hour"><i class="far fa-clock separate_icon"></i></div>
+                 <div>8:15 - 11:30</div>
+                 <i class="fas fa-info-circle info_icon_shedule pi_cw_info2"></i>
+                   <div class="pop_up_m_pi_cw_gr2" style="display: none;">
+                     <div class="pop_up_window_one">Ćwiczenia odbywają się na platformie <span style="color:#efaa15">Zoom</span>,<br>(linki znajdują się na PZE).</div>
+                     <div class="pop_up_window_button1">
+                       <a style="color:white" target="_blank" href="https://platforma.polsl.pl/re/course/view.php?id=898">Przejdź do PZE</a>
+                     </div>
+                     <div class="pop_up_window_button2">
+                       <a style="color:white" target="_blank" href="work-in-progress">Warunki zalicznia Przedmiotu</a>
+                     </div>
+                   </div>
+                 </div>  
+                   <div class="separate thursday_sep"></div>
+                   <!--END OF THURSDAY SECTION-->
+           </div>
+               <!--START OF FRIDAY SECTION-->
+           <div class="col-xl-2 friday">
+             <header class="friday_title">Piątek</header>
+                   <!--ANG B2B CW FRIDAY SECTION
+               <div class="_fridaycontent group_b2b">
+                 <div class="specific_shedule">ĆWICZENIA</div>
+                 <span>Język Angielski</span>
+                 <div class="separate_title_hour"><i class="far fa-clock separate_icon"></i></div>
+                 <div>8:30 - 10:00</div>
+                 <i class="fas fa-info-circle info_icon_shedule eng_cw_infob2b"></i>
+                   <div class="pop_up_m_eng_cw_grb2b" style="display: none;">
+                     <div class="pop_up_window_one">Ćwiczenia odbywają się na platformie <span style="color:#efaa15">Zoom</span>,<br>(linki znajdują się na PZE).</div>
+                     <div class="pop_up_window_button1">
+                       <a style="color:white" target="_blank" href="https://platforma.polsl.pl/rjo5/enrol/index.php?id=727">Przejdź do PZE</a>
+                     </div>
+                     <div class="pop_up_window_button2">
+                       <a style="color:white" target="_blank" href="work-in-progress">Warunki zalicznia Przedmiotu</a>
+                     </div>
+                   </div>
+                 </div>
+                   <!--ANG C1A CW FRIDAY SECTION
+               <div class="_fridaycontent group_c1a">
+                 <div class="specific_shedule">ĆWICZENIA</div>
+                 <span>Język Angielski</span>
+                 <div class="separate_title_hour"><i class="far fa-clock separate_icon"></i></div>
+                 <div>8:15 - 9:45</div>
+                 <i class="fas fa-info-circle info_icon_shedule eng_cw_infoc1a"></i>
+                   <div class="pop_up_m_eng_cw_grc1a" style="display: none;">
+                     <div class="pop_up_window_one">Ćwiczenia odbywają się na platformie <span style="color:#efaa15">Zoom</span>,<br>(linki znajdują się na PZE).</div>
+                     <div class="pop_up_window_button1">
+                       <a style="color:white" target="_blank" href="https://platforma.polsl.pl/rjo5/enrol/index.php?id=829">Przejdź do PZE</a>
+                     </div>
+                     <div class="pop_up_window_button2">
+                       <a style="color:white" target="_blank" href="work-in-progress">Warunki zalicznia Przedmiotu</a>
+                     </div>
+                   </div>
+                 </div>
+                   <!--ANG C1B CW FRIDAY SECTION
+               <div class="_fridaycontent group_c1b">
+                 <div class="specific_shedule">ĆWICZENIA</div>
+                 <span>Język Angielski</span>
+                 <div class="separate_title_hour"><i class="far fa-clock separate_icon"></i></div>
+                 <div>8:15 - 9:45</div>
+                 <i class="fas fa-info-circle info_icon_shedule eng_cw_infoc1b"></i>
+                   <div class="pop_up_m_eng_cw_grc1b" style="display: none;">
+                     <div class="pop_up_window_one">Ćwiczenia odbywają się na platformie <span style="color:#efaa15">Zoom</span>,<br>(linki znajdują się na PZE).</div>
+                     <div class="pop_up_window_button1">
+                       <a style="color:white" target="_blank" href="https://platforma.polsl.pl/rjo5/course/view.php?id=507">Przejdź do PZE</a>
+                     </div>
+                     <div class="pop_up_window_button2">
+                       <a style="color:white" target="_blank" href="work-in-progress">Warunki zalicznia Przedmiotu</a>
+                     </div>
+                   </div>
+                 </div>
+                   <!--PI GR 1 CW FRIDAY SECTION
+               <div class="_fridaycontent group_1">
+                 <div class="specific_shedule">ĆWICZENIA</div>
+                 <span>Podstawy Informatyki</span>
+                 <div class="separate_title_hour"><i class="far fa-clock separate_icon"></i></div>
+                 <div>10:00 - 13:15</div>
+                 <i class="fas fa-info-circle info_icon_shedule pi_cw_info1"></i>
+                   <div class="pop_up_m_pi_cw_gr1" style="display: none;">
+                     <div class="pop_up_window_one">Ćwiczenia odbywają się na platformie <span style="color:#efaa15">Zoom</span>,<br>(linki znajdują się na PZE).</div>
+                     <div class="pop_up_window_button1">
+                       <a style="color:white" target="_blank" href="https://platforma.polsl.pl/re/course/view.php?id=898">Przejdź do PZE</a>
+                     </div>
+                     <div class="pop_up_window_button2">
+                       <a style="color:white" target="_blank" href="work-in-progress">Warunki zalicznia Przedmiotu</a>
+                     </div>
+                   </div>
+                 </div>
+                   <div class="separate friday_sep"></div>-->               
+           </div>
+           <div class="col-xl-10 monday" style="font-size:40px; font-weight:600; color:#003a70; padding-top:150px; padding-bottom:170px">
+            <i class="far fa-calendar-times" style="font-size:50px; padding-bottom:20px"></i><br>
+            Trwa właśnie <span style="color:#efaa15">sesja egzaminacyjna</span>.<br><span style="font-size:25px;color:#919191;font-weight:500;">Wszelkie informacje na temat kolokwiów i egzaminów znajdziesz na naszej grupie facebook.</span>
+            
+          </div> 
+               <!--SHEDULE BOTTOM REST OF CONTENT-->
+           <div class="background_under_shedule1 col-xl-4">
+             <a target="_blank" style="color:#003a70; transition:0.4s;" class="href_hover_style">
+               <i class="fas fa-file-pdf"></i>&nbsp;&nbsp;
+                 <div style="padding-bottom:20px;margin-top:20px !important;display:inline-block;">Pobierz pełny plan zajęć</div><br></a>
+             <i class="fas fa-info-circle padding_icon"><span class="icon_style_txt">&nbsp;&nbsp;Kliknij w ikonę informacji aby dowiedzieć się więcej.</span></i><br>
+               <i class="fas fa-info-circle padding_icon"><span class="icon_style_txt">&nbsp;&nbsp;Aktualny dzień tygodnia poznasz po zmianie koloru na żółty.</span></i><br>
+             <i class="fas fa-info-circle padding_icon"><span class="icon_style_txt">&nbsp;&nbsp;Kliknij w żółty przycisk aby zresetować plan.</span></i><br>
+           </div>
+           <div class="background_under_shedule3 col-xl-1">
+             <div class="reload_shedule toolt">
+               <i class="fas fa-sync-alt reload_icon"></i>
+                 <span class="tooltiptext">Kliknij aby zresetować plan</span>
+             </div>
+           </div>
+           <div class="background_under_shedule2 col-xl-4">
+             <img class="arrow_img2" src="css/arrow2.png" alt="arrow_indicator"/>
+           </div>
+                 <!--MOBILE SHEDULE BOTTOM REST OF CONTENT-->
+             <a target="_blank" style="color:#003a70; transition:0.4s;" class="href_hover_style_m">
+               <i class="fas fa-file-pdf pdf_file_m"></i>
+                 <div style="display:block;font-size:30px">Pobierz pełny plan zajęć</div><br></a>
+             <div class="fas fa-info-circle padding_icon_m"><div class="icon_style_txt_m">Kliknij w ikonę informacji aby dowiedzieć się więcej.</div></div>
+               <i class="fas fa-info-circle padding_icon_m"><div class="icon_style_txt_m">Aktualny dzień tygodnia poznasz po zmianie koloru na żółty.</div></i><br>
+             <i class="fas fa-info-circle padding_icon_m"><div class="icon_style_txt_m">Kliknij w żółty przycisk aby zresetować plan.</div></i><br>
+               <div class="reload_shedule_m">
+               <i class="fas fa-sync-alt reload_icon"></i>
+             </div>
+             <!--SHEDULE TOP REST OF CONTENT-->
+         <div class="shedule_background">
+            <div class="row justify-content-center">
+             <div class="background_content1 col-xl-6">Aktualnie wyświetlam plan dla:&nbsp;&nbsp;<br>
+                  <span class="group_1">Grupa 1,&nbsp;&nbsp;</span>
+                  <span class="group_2">Grupa 2,&nbsp;&nbsp;</span>
+                    <span class="group_pi1_1">PI 1/1,&nbsp;&nbsp;</span>
+                    <span class="group_pi1_2">PI 1/2,&nbsp;&nbsp;</span>
+                    <span class="group_pi2_1">PI 2/1,&nbsp;&nbsp;</span>
+                    <span class="group_pi2_2">PI 2/2,&nbsp;&nbsp;</span>
+                      <span class="group_b2a">Ang B2 A &nbsp;&nbsp;</span>
+                      <span class="group_b2b">Ang B2 B &nbsp;&nbsp;</span>
+                      <span class="group_c1a">Ang C1 A &nbsp;&nbsp;</span>
+                      <span class="group_c1b">Ang C1 B &nbsp;&nbsp;</span>  
+              </div>
+              <div class="background_content2 col-xl-6">Dzisiaj jest:<br>
+                <span id="day"></span><span class="sep_clock">,&nbsp;</span>
+                  <span id="clock"></span> 
+              </div>
+                <script type="text/javascript" name="clockFunction_highlighting">
+                  document.getElementById("clock").innerHTML = day+"."+month+"."+year;
+                  if (dayN == 1) {
+                    document.getElementById("day").innerHTML = "Poniedziałek";
+                    $(".monday_title, .monday_sep").css("background-color","#efaa15"); }
+                  else if (dayN == 2) {
+                    document.getElementById("day").innerHTML = "Wtorek";
+                    $(".tuesday_title, .tuesday_sep").css("background-color","#efaa15"); }    
+                  else if (dayN == 3) {
+                    document.getElementById("day").innerHTML = "Środa";
+                    $(".wednesday_title, .wednesday_sep").css("background-color","#efaa15"); }
+                  else if (dayN == 4) {
+                    document.getElementById("day").innerHTML = "Czwartek";
+                    $(".thursday_title, .thursday_sep").css("background-color","#efaa15"); }
+                  else if (dayN == 5) {
+                    document.getElementById("day").innerHTML = "Piątek";
+                    $(".friday_title, .friday_sep").css("background-color","#efaa15"); }
+                  else if (dayN == 6) {
+                    document.getElementById("day").innerHTML = "Sobota"; }
+                  else if (dayN == 0) {
+                    document.getElementById("day").innerHTML = "Niedziela"; }
+                </script>
+             </div>
+         </div>
+         </div>
+         </div>
+     </div>  
+       <div id="elementH"></div>
+        <div class="col-xl-12 shedule_pre_txt_field">
+          <img class="show_before_shedule_gen_img" src="css/sleep.png" alt="sleeping_icon"/>
+          <p class="show_before_shedule_gen_txt">Ale co tu tak pusto BibleThump :(<br>Wróć na <span class="show_before_shedule_gen_hypertxt scrollTo_button_upper">górę strony</span> i wygeneruj swój spersonalizowany plan.</p>
+        </div>
+      </div>
+    </div> 
+    <!--SLIDER SECTION-->
+    <div class="slider_style" name="slider_section">
+     <header style="padding: 0 60px 0 60px;">
+       <h1>A tutaj przejdziesz bezpośrednio do kursów na PZE</h1>
+         <div class="line_between_main_bottom">
+           <i class="fas fa-chalkboard-teacher icon_main_bottom"></i></div>
+           <div class="subtxt">Wystarczy że klikniesz w odpowiedni kafelek, a twoim oczom ukaże się panel z najważniejszymi<br>informacjami dotyczącymi wybranego przedmiotu.</div>
+         </header>
+       <nav name="choosing_menu">
+         <div class="container-fluid" style="padding:0px !important;">
+           <div class="row justify-content-center">
+             <div class="col-xl-4 slider_navigation">
+                  <!--AMIAL-->
+               <label id="amial_choose" class="subject_choose amial_choose" style="color:white;">
+                 <input type="radio" name="match-btn" id="radio1" style="display:none;">
+                   <span style="text-align:center">
+                     <i class="fas fa-square-root-alt radio_icons" id="amial_ico" style="color:white;"></i>
+                   </span>
+                     <span style="padding-right:20px">ANALIZA MATEMATYCZNA I ALGEBRA LINIOWA</span>
+               </label>
+                 <div class="p_button1 active_button"></div>
+                 <!--ASC-->
+             <label id="asc_choose" class="subject_choose">
+               <input type="radio" name="asc-btn" id="radio1" style="display:none;">
+                 <span style="text-align:center">
+                   <i class="fas fa-calculator radio_icons" id="asc_ico"></i>
+                 </span>
+                   <span style="padding-right:20px">ARYTMETYKA SYSTEMÓW CYFROWYCH</span>
+             </label>
+               <div class="p_button2"></div>
+               <!--PI-->
+           <label id="pi_choose" class="subject_choose">
+             <input type="radio" name="pi-btn" id="radio1" style="display:none;">
+               <span style="text-align:center">   
+                 <i class="fas fa-memory radio_icons" id="pi_ico"></i>
+               </span>
+                 <span style="padding-right:20px">PODSTAWY INFORMATYKI</span>
+           </label>
+             <div class="p_button3"></div>
+                 <!--TUC-->
+             <label id="tuc_choose" class="subject_choose">
+               <input type="radio" name="tuc-btn" id="radio1" style="display:none;">
+                 <span style="text-align:center">
+                   <i class="fas fa-microchip radio_icons" id="tuc_ico"></i>
+                 </span>
+                   <span style="padding-right:20px">TEORIA UKŁADÓW CYFROWYCH</span>
+             </label>
+               <div class="p_button4"></div>
+               <!--PE-->
+           <label id="pe_choose" class="subject_choose">
+             <input type="radio" name="pe-btn" id="radio1" style="display:none;">
+               <span style="text-align:center">
+                 <i class="fas fa-bolt radio_icons" id="pe_ico"></i>
+               </span>
+                 <span style="padding-right:20px">PODSTAWY ELEKTROTECHNIKI</span>
+           </label>
+             <div class="p_button5"></div>
+                 <!--PPK-->
+             <label id="ppk_choose" class="subject_choose">
+               <input type="radio" name="ppk-btn" id="radio1" style="display:none;">
+                 <span style="text-align:center">
+                   <i class="fas fa-terminal radio_icons" id="ppk_ico"></i>
+                 </span>
+                   <span style="padding-right:20px">PODSTAWY PROGRAMOWANIA KOMPUTERÓW</span>
+             </label>
+               <div class="p_button6"></div>
+               <!--PAiPSI-->
+           <label id="paipsi_choose" class="subject_choose">
+             <input type="radio" name="law-btn" id="radio1" style="display:none;">
+               <span style="text-align:center">
+                 <i class="fas fa-balance-scale radio_icons" id="paipsi_ico"></i>
+               </span>
+                 <span style="padding-right:20px">PRAWO AUTORSKIE</span>
+           </label>
+             <div class="p_button7"></div>
+                 <!--ENG-->
+             <label id="eng_choose" class="subject_choose">
+               <input type="radio" name="english-btn" id="radio1" style="display:none;">
+                 <span style="text-align:center">
+                   <i class="fas fa-language radio_icons" id="eng_ico"></i>
+                 </span>
+                   <span style="padding-right:20px">JĘZYK ANGIELSKI</span>
+             </label>
+               <div class="p_button8"></div>
+           </div>
+             <!--SUBJECT DESCRIPTION SECTION-->
+         <div class="col-xl-7 content_desc_choose">
+               <!--AMIAL DESCRIPTION SECTION-->
+           <article class="amial_d style_description" style="display:block;">
+             <div class="__d_upper_txt" style="margin-top:42px !important;">PRZEDMIOT</div>
+               <div class="__d_main_txt">Analiza Matematyczna i Algebra Liniowa</div>
+                 <div class="__d_upper_txt" style="padding-top:10px">WYDZIAŁ MATEMATYKI STOSOWANEJ</div>
+                   <div class="__line_separate">
+                     <i class="fas fa-square-root-alt __line_separate_icon"></i>
+                   </div>
+                 <div class="__d_under_txt">Ćwiczenia oraz wykłady odbywają się na platformie <span style="color:#efaa15">Microsoft&reg; Teams</span>.</div>
+               <a href="https://platforma.polsl.pl/rms/course/view.php?id=124" target="_blank">
+                 <div class="__d_button1">PZE&nbsp;&nbsp; (wykłady i ćwiczenia)</div></a>
+             <a href="work-in-progress" target="_blank">
+               <div class="__d_button2">Warunki zaliczenia przedmiotu</div></a>
+           </article>
+                 <!--ASC DESCRIPTION-->
+             <article class="asc_d style_description">
+             <div class="__d_upper_txt" style="margin-top:32px !important;">PRZEDMIOT</div>
+               <div class="__d_main_txt">Arytmetyka Systemów Cyfrowych</div>
+                 <div class="__d_upper_txt" style="padding-top:10px">WYDZIAŁ ELEKTRYCZNY, WYDZIAŁ AUTOMATYKI, ELEKTRONIKI I INFORMATYKI (KAT)</div>
+                   <div class="__line_separate">
+                     <i class="fas fa-calculator __line_separate_icon"></i>
+                   </div>
+                 <div class="__d_under_txt">Ćwiczenia odbywają się na platformie <span style="color:#efaa15">Zoom</span>.<br>Wykłady odbywają się na platformie <span style="color:#efaa15">Microsoft&reg; Teams</span>.</div>
+               <a href="https://platforma.polsl.pl/re/course/view.php?id=877" target="_blank">
+                 <div class="__d_button1">PZE&nbsp;&nbsp; (ćwiczenia)</div></a>
+             <a href="work-in-progress" target="_blank">
+               <div class="__d_button2">Warunki zaliczenia przedmiotu</div></a>
+             </article>
+               <!--PI DESCRIPTION-->
+           <article class="pi_d style_description">
+             <div class="__d_upper_txt" style="margin-top:32px !important;">PRZEDMIOT</div>
+               <div class="__d_main_txt">Podstawy Informatyki</div>
+                 <div class="__d_upper_txt" style="padding-top:10px">WYDZIAŁ ELEKTRYCZNY, WYDZIAŁ AUTOMATYKI, ELEKTRONIKI I INFORMATYKI (KAT)</div>
+                   <div class="__line_separate">
+                     <i class="fas fa-memory __line_separate_icon"></i>
+                   </div>
+                 <div class="__d_under_txt">Ćwiczenia i labolatoria odbywają się na platformie <span style="color:#efaa15">Zoom</span>.<br>Wykłady odbywają się na platformie <span style="color:#efaa15">Big Blue Button</span>.</div>
+               <a href="https://platforma2.polsl.pl/rau2/course/view.php?id=908" target="_blank">
+                 <div class="__d_button1">PZE&nbsp;&nbsp; (wykłady)</div></a>
+               <a href="https://platforma.polsl.pl/re/course/view.php?id=898" target="_blank">
+                 <div class="__d_button1">PZE&nbsp;&nbsp; (ćwiczenia i lab)</div></a>
+             <a href="work-in-progress" target="_blank">
+               <div class="__d_button2">Warunki zaliczenia przedmiotu</div></a>
+           </article>
+                 <!--TUC DESCRIPTION-->
+             <article class="tuc_d style_description">
+               <div class="__d_upper_txt" style="margin-top:32px !important;">PRZEDMIOT</div>
+                 <div class="__d_main_txt">Teoria Układów Cyfrowych</div>
+                   <div class="__d_upper_txt" style="padding-top:10px">WYDZIAŁ ELEKTRYCZNY, WYDZIAŁ AUTOMATYKI, ELEKTRONIKI I INFORMATYKI (KAT)</div>
+                     <div class="__line_separate">
+                       <i class="fas fa-microchip __line_separate_icon"></i>
+                     </div>
+                   <div class="__d_under_txt">Ćwiczenia odbywają się na platformie <span style="color:#efaa15">Zoom</span>.<br>Wykłady odbywają się na platformie <span style="color:#efaa15">Microsoft&reg; Teams</span>.</div>
+                 <a href="https://platforma.polsl.pl/re/course/view.php?id=881" target="_blank">
+                   <div class="__d_button1">PZE&nbsp;&nbsp; (ćwiczenia)</div></a>
+               <a href="work-in-progress" target="_blank">
+                 <div class="__d_button2">Warunki zaliczenia przedmiotu</div></a>
+             </article>
+               <!--PE DESCRIPTION-->
+           <article class="pe_d style_description">
+             <div class="__d_upper_txt" style="margin-top:42px !important;">PRZEDMIOT</div>
+               <div class="__d_main_txt">Podstawy Elektrotechniki</div>
+                 <div class="__d_upper_txt" style="padding-top:10px">WYDZIAŁ ELEKTRYCZNY</div>
+                   <div class="__line_separate">
+                     <i class="fas fa-bolt __line_separate_icon"></i>
+                   </div>
+                 <div class="__d_under_txt">Ćwiczenia oraz wykłady odbywają się na platformie <span style="color:#efaa15">Zoom</span>.</div>
+               <a href="https://platforma.polsl.pl/re/course/view.php?id=890" target="_blank">
+                 <div class="__d_button1">PZE&nbsp;&nbsp; (wykłady i ćwiczenia)</div></a>
+             <a href="work-in-progress" target="_blank">
+               <div class="__d_button2">Warunki zaliczenia przedmiotu</div></a>
+           </article>
+                 <!--PPK DESCRIPTION-->
+             <article class="ppk_d style_description">
+               <div class="__d_upper_txt" style="margin-top:42px !important;">PRZEDMIOT</div>
+               <div class="__d_main_txt">Podstawy Programowania Komputerów</div>
+                 <div class="__d_upper_txt" style="padding-top:10px">WYDZIAŁ ELEKTRYCZNY, WYDZIAŁ AUTOMATYKI, ELEKTRONIKI I INFORMATYKI (KAT)</div>
+                   <div class="__line_separate">
+                     <i class="fas fa-terminal __line_separate_icon"></i>
+                   </div>
+                 <div class="__d_under_txt">Wykłady i labolatoria odbywają się na platformie <span style="color:#efaa15">Zoom</span>.</div>
+               <a href="https://platforma2.polsl.pl/rau2/course/view.php?id=909" target="_blank">
+                 <div class="__d_button1">PZE&nbsp;&nbsp; (wykłady)</div></a>
+               <a href="https://platforma.polsl.pl/re/course/view.php?id=322" target="_blank">
+                 <div class="__d_button1">PZE&nbsp;&nbsp; (labolatoria)</div></a>
+             <a href="work-in-progress" target="_blank">
+               <div class="__d_button2">Warunki zaliczenia przedmiotu</div></a>
+             </article>
+               <!--PAIPSI DESCRIPTION-->
+           <article class="paipsi_d style_description">
+             <div class="__d_upper_txt" style="margin-top:42px !important;">PRZEDMIOT</div>
+             <div class="__d_main_txt">Prawo Autorskie i Problemy Społeczne Informatyki</div>
+               <div class="__d_upper_txt" style="padding-top:10px">WYDZIAŁ ELEKTRYCZNY</div>
+                 <div class="__line_separate">
+                   <i class="fas fa-balance-scale __line_separate_icon"></i>
+                 </div>
+               <div class="__d_under_txt">Wykłady odbywają się na platformie <span style="color:#efaa15">Big Blue Button</span>.</div>
+             <a href="https://platforma.polsl.pl/re/course/view.php?id=879" target="_blank">
+               <div class="__d_button1">PZE&nbsp;&nbsp; (wykłady)</div></a>
+           <a href="work-in-progress" target="_blank">
+             <div class="__d_button2">Warunki zaliczenia przedmiotu</div></a>
+           </article>
+                 <!--ENG DESCRIPTION-->
+             <article class="eng_d style_description">
+               <div class="__d_upper_txt">PRZEDMIOT</div>
+               <div class="__d_main_txt">Język Angielski</div>
+                 <div class="__d_upper_txt" style="padding-top:10px">STUDIUM JĘZYKÓW OBCYCH POLITECHNIKI ŚLĄSKIEJ</div>
+                   <div class="__line_separate">
+                     <i class="fas fa-language __line_separate_icon"></i>
+                   </div>
+                 <div class="__d_under_txt">Ćwiczenia odbywają się na platformie <span style="color:#efaa15">Zoom</span>.</div>
+               <a href="https://platforma.polsl.pl/rjo5/enrol/index.php?id=767" target="_blank">
+                 <div  class="__d_button1">PZE&nbsp;&nbsp; (B2A)</div></a>
+               <a href="https://platforma.polsl.pl/rjo5/enrol/index.php?id=727" target="_blank">
+                 <div class="__d_button1">PZE&nbsp;&nbsp; (B2B)</div></a>
+               <a href="https://platforma.polsl.pl/rjo5/enrol/index.php?id=829" target="_blank">
+                 <div class="__d_button1">PZE&nbsp;&nbsp; (C1A)</div></a>
+               <a href="https://platforma.polsl.pl/rjo5/course/view.php?id=507 " target="_blank">
+                 <div class="__d_button1">PZE&nbsp;&nbsp; (C1B)</div></a>
+             <a href="work-in-progress" target="_blank">
+               <div class="__d_button2eng">Warunki zaliczenia przedmiotu</div></a>
+             </article>
+           </div>
+         </div>
+       </div> 
+     </nav>    
+    </div>
+    <!--SEPARATE (FOOTER-SLIDER) SECTION-->
+    <div class="after_slider_separator" name="line_separatro"></div> 
+        <!--FOOTER SECTION-->
+    <footer class="footer">
+      <div class="container-fluid" style="padding:0">
+        <div class="row justify-content-center">
+          <div class="col-xl-4 desktop_footer" style="text-align:left;">
+            Some icons by 
+              <a href="https://fontawesome.com/" target="_blank" style="color:#5e5e5e;font-weight:500;">Font Awesome</a> 
+            and 
+              <a href="https://stock.adobe.com/" target="_blank" style="color:#5e5e5e;font-weight:500;">Adobe&reg; Stock</a>
+          </div>
+            <div class="col-xl-4 desktop_footer">
+              &copy; 2020-2021 by 
+                <a style="color:#5e5e5e;font-weight:500;" target="_blank">Miłosz Gilga.</a>   &nbsp;&nbsp;&nbsp;All rights reserved.     
+            </div>
+          <div class="col-xl-4 desktop_footer" style="text-align:right;">
+            This site feeds on cookies.&nbsp;&nbsp;
+              <i class="fas fa-cookie-bite"></i>&nbsp;&nbsp;&nbsp;
+                <a style="color:#5e5e5e;font-weight:500;" target="_blank" href="cookies">Privaty policy</a>  
+          </div>
+          <div class="col-xl-12 mobile_footer">
+            Some icons by 
+              <a href="https://fontawesome.com/" target="_blank" style="color:#5e5e5e;font-weight:500;">Font Awesome</a> 
+            and 
+              <a href="https://stock.adobe.com/" target="_blank" style="color:#5e5e5e;font-weight:500;">Adobe&reg; Stock</a>
+            <br><br>
+            &copy; 2020-2021 by 
+              <a style="color:#5e5e5e;font-weight:500;">Miłosz Gilga.</a>
+                &nbsp;&nbsp;&nbsp;All rights reserved.<br><br>
+              This site feeds on cookies.&nbsp;&nbsp;
+                <i class="fas fa-cookie-bite"></i>&nbsp;&nbsp;&nbsp;
+            <a style="color:#5e5e5e;font-weight:500;" href="cookies">Privaty policy</a><br><br><br><br> 
+          </div>
+        </div>
+      </div>
+    </footer>
+      <script src="https://cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.min.js"></script> 
+        <!--COOKIES CREATE & MANAGEMENT SCRIPT-->
+    <script type="text/javascript" name="cookies_remember_show_hide_shedule">
+      $(document).ready(function() {
+        var ciastko = $.cookie('__rememberChoiceCookie');
+        if(ciastko !== undefined) {
+          $(ciastko).each(function() {
+            this.click();
+          }) }
+      })
+        
+      function changeChoice1(data, element) {
+        //MAIN GROUP SECTION  
+      if(data.checked && element == 'choice1_col') {
+        $(".group_first_main").addClass("highlight-yellow");
+        $(".group_second_main").removeClass("highlight-yellow");
+        $(".group_1").show();
+      }
+      else {
+        $(".group_1").hide();
+      }
+      if(data.checked && element == 'choice2_col') {
+        $(".group_first_main").removeClass("highlight-yellow");
+        $(".group_second_main").addClass("highlight-yellow");
+        $(".group_2").show();
+      }
+      else {
+        $(".group_2").hide();
+      }
+          
+      var checked = "";
+      $('input[type="radio"]').each(function() {
+        if($(this).prop('checked')) {
+          checked += "#" + this.id + ","; 
+        }
+      })
+
+      checked = checked.replace(/,$/, '')
+      $.cookie('__rememberChoiceCookie', checked);
+      }
+      
+      function changeChoice2(data, element) {  
+        //PI GROUP SECTION  
+      if(data.checked && element == 'choice3_col') {
+        $(".group_second_pi, .group_third_pi, .group_fourth_pi").removeClass("highlight-yellow");
+        $(".group_first_pi").addClass("highlight-yellow");
+        $(".group_pi1_1").show();
+      }
+      else {
+        $(".group_pi1_1").hide();
+      }
+      if(data.checked && element == 'choice4_col') {
+        $(".group_third_pi, .group_first_pi, .group_fourth_pi").removeClass("highlight-yellow");
+        $(".group_second_pi").addClass("highlight-yellow");
+        $(".group_pi1_2").show();
+      }
+      else {
+        $(".group_pi1_2").hide();
+      }
+      if(data.checked && element == 'choice5_col') {
+        $(".group_first_pi, .group_second_pi, .group_fourth_pi").removeClass("highlight-yellow");
+        $(".group_third_pi").addClass("highlight-yellow");
+        $(".group_pi2_1").show();
+      }
+      else {
+        $(".group_pi2_1").hide();
+      }
+      if(data.checked && element == 'choice6_col') {
+        $(".group_first_pi, .group_second_pi, .group_third_pi").removeClass("highlight-yellow");
+        $(".group_fourth_pi").addClass("highlight-yellow");
+        $(".group_pi2_2").show();
+      }
+      else {
+        $(".group_pi2_2").hide();
+      }
+        
+      var checked = "";
+      $('input[type="radio"]').each(function() {
+        if($(this).prop('checked')) {
+          checked += "#" + this.id + ","; 
+        }
+      })
+
+      checked = checked.replace(/,$/, '')
+      $.cookie('__rememberChoiceCookie', checked);
+      }
+        
+      function changeChoice3(data, element) {    
+        //ENG GROUP SECTION  
+      if(data.checked && element == 'choice7_col') {
+        $(".group_second_eng, .group_third_eng, .group_fourth_eng").removeClass("highlight-yellow");
+        $(".group_first_eng").addClass("highlight-yellow");
+        $(".group_b2a").show();
+      }
+      else {
+        $(".group_b2a").hide();
+      }
+      if(data.checked && element == 'choice8_col') {
+        $(".group_third_eng, .group_first_eng, .group_fourth_eng").removeClass("highlight-yellow");
+        $(".group_second_eng").addClass("highlight-yellow");
+        $(".group_b2b").show();
+      }
+      else {
+        $(".group_b2b").hide();
+      }
+      if(data.checked && element == 'choice9_col') {
+        $(".group_first_eng, .group_second_eng, .group_fourth_eng").removeClass("highlight-yellow");
+        $(".group_third_eng").addClass("highlight-yellow");
+        $(".group_c1a").show();
+      }
+      else {
+        $(".group_c1a").hide();
+      }
+      if(data.checked && element == 'choice10_col') {
+        $(".group_first_eng, .group_second_eng, .group_third_eng").removeClass("highlight-yellow");
+        $(".group_fourth_eng").addClass("highlight-yellow");
+        $(".group_c1b").show();
+      }
+      else {
+        $(".group_c1b").hide();
+      }
+          
+      var checked = "";
+      $('input[type="radio"]').each(function() {
+        if($(this).prop('checked')) {
+          checked += "#" + this.id + ","; 
+        }
+      })
+
+      checked = checked.replace(/,$/, '')
+      $.cookie('__rememberChoiceCookie', checked);
+      }
+    </script>
+      <!--BOOTSTRAP SCRIPTS-->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+  </body>
+</html>
