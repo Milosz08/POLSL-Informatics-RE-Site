@@ -10,7 +10,8 @@ function CookieNotification_create(name,value,days) {
         var expires = "; expires="+date.toGMTString(); 
     } else {
         var expires = ""; 
-        document.cookie = name+"="+value+expires+"; path=/"; document.getElementById("simplecookienotification_v01").style.display = "none"; 
+        document.cookie = name+"="+value+expires+"; path=/"; 
+        document.getElementById("simplecookienotification_v01").style.display = "none"; 
     } 
     
 //READ COOKIE    
@@ -27,5 +28,6 @@ function CookieNotification_read(name) {
 
 //HIDING COOKIE NOTIFICATION    
 var CookieNotificationIst = CookieNotification_read("simplecookienotification_v01");
-    if(CookieNotificationIst == 1) {                           document.getElementById("simplecookienotification_v01").style.display = "none"; 
+    if(CookieNotificationIst == 1) {                           
+        document.getElementById("simplecookienotification_v01").style.display = "none"; 
     }
