@@ -1,0 +1,314 @@
+.shedule_section_style {
+  position: relative;
+  z-index: 40;
+}
+
+.highlight-yellow {
+  color: #efaa15;
+}
+
+input[type=radio] {
+  display: none;    
+}
+
+.shedule_content {
+  display: none;
+  margin-top: 200px !important;
+  margin-bottom: 100px !important;
+}
+
+.shedule_background {
+  background-color: #e6e6e6; 
+  width: 80% !important;
+  height: 120%;
+  position: absolute;
+  margin-top: -140px !important;
+  z-index: -1;
+  box-shadow: 0 0 50px gray;
+}
+
+.shedule_groups {
+  font-size: 26px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  color: gray;
+  text-align: center;
+  padding-top: 20px;
+  width: 100% !important;
+  position: relative;
+  z-index: 18;
+  margin-bottom: -20px !important;
+}
+
+.icon_style_txt {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 18px !important;
+}
+
+.padding_icon {
+  padding-bottom: 10px !important;  
+}
+
+.background_content1, .background_content2 {
+  text-align: center;
+  padding: 30px;
+  font-size: 20px;
+  margin: 0 !important;
+}
+
+.background_content1 span, #clock, #day, .sep_clock {
+  font-size: 27px;
+  color: #003a70;
+  font-weight: 600
+}
+
+.monday, .tuesday, .wednesday, .thursday, .friday {
+  min-width: 235px;
+  height: auto !important;
+  background-color: #fafafa;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: 12px 12px 10px lightgray;
+}
+
+.monday_title, .tuesday_title, .wednesday_title, .thursday_title, .friday_title {
+  padding: 20px;
+  color: white;
+  background-color: #003a70;
+  margin: 6px !important;
+}
+
+._mondaycontent, ._tuesdaycontent, ._thursdaycontent, ._wednesdaycontent , ._fridaycontent {
+  height: auto;
+  font-size: 21px;
+  color: #003a70;
+  font-weight: 600;
+  padding: 10px;
+  background-color: white;
+  margin: 6px !important;
+  border: 1px solid lightgray;
+}
+
+.separate_title_hour {
+  height: 1px;
+  background-color: darkgray;
+  margin-left: 20px !important;
+  margin-right: 20px !important;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+.separate_icon {
+  color: gray;
+  font-size: 15px;
+  background-color: white;
+  transform: translateY(-18px);
+  padding: 6px;
+}
+
+.specific_shedule {
+  font-size: 17px;
+  padding-bottom: 10px;
+  color: gray;
+  font-weight: 400;
+}
+
+.info_icon_shedule {
+  padding-top: 20px;
+  font-size: 30px;
+  transition: 0.4s;
+}
+
+.info_icon_shedule:hover {
+  color: #efaa15;
+  cursor: pointer;
+}
+
+.pop_up_window_one {
+  font-size: 18px;
+  padding-top: 14px;
+}
+
+.pop_up_window_button1, .pop_up_window_button2 {
+  background-color: #003a70;
+  color: white;
+  font-weight: 400;
+  max-width: 140px;
+  font-size: 18px;
+  padding-top: 4px;
+  padding-bottom: 6px;
+  margin-top: 20px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  transition: 0.4s;
+}
+
+.pop_up_window_button2 {
+  background-color: #efaa15;
+  max-width: 240px;
+  margin-bottom: 10px !important;
+}
+
+.pop_up_window_button1:hover, .pop_up_window_button2:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 7px darkgray;
+}
+
+.separate {
+  margin-left: 6px !important;
+  margin-right: 6px !important;
+  height: 10px;
+  background-color: #003a70;
+}
+
+.arrow_img2 {
+  width: 330px;
+  height: 160px;
+}
+
+.background_under_shedule1, .background_under_shedule2 {
+  max-width: 490px !important;
+  text-align: left;
+  margin-top: 40px !important;
+  color: #003a70;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.background_under_shedule1 {
+  margin-left: 80px !important;  
+}
+
+.background_under_shedule3 {
+  min-width: 150px !important;
+}
+
+.background_under_shedule2 {
+  margin-left: 80px !important;  
+}
+
+.reload_shedule, .reload_shedule_m {
+  width: 80px;
+  height: 80px;
+  background-color: #efaa15;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 50px !important;
+  border-radius: 100%;
+  padding-top: 20px;
+  transition: 0.4s;
+  box-shadow: 0px 0px 7px gray;
+}
+
+.reload_shedule_m {
+  width: 80px !important;
+  height: 80px !important;
+  margin-top: 10px !important;
+  padding-top: 22px;
+}
+
+.reload_shedule:hover, .reload_shedule_m:hover {
+  box-shadow: 0px 0px 20px gray;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.reload_icon {
+  color: white;
+  text-align: center;
+  font-size: 33px;
+  transition: 1s;
+}
+
+.reload_icon_hover {
+  transform: rotate(120deg); 
+}
+
+.toolt {
+  position: relative;
+  display: inline-block;
+}
+
+.toolt .tooltiptext {
+  visibility: hidden;
+  width: 180px;
+  margin-left: -60px !important;
+  margin-top: 80px !important;
+  font-size: 20px;
+  background-color: #003a70;
+  color: white;
+  text-align: center;
+  padding: 6px 6px;
+  position: absolute;
+  z-index: 1;
+}
+
+.toolt:hover .tooltiptext {
+  visibility: visible;
+}
+
+.href_hover_style:hover, .href_hover_style_m:hover {
+  color: #efaa15 !important;
+}
+
+.href_hover_style_m {
+  font-size: 40px;
+  padding-top: 50px;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+  font-weight: 600;
+}
+
+.padding_icon_m {
+  font-size: 30px;
+  color: #003a70;
+  margin-bottom: 70px !important;
+}
+
+.icon_style_txt_m {
+  margin-top: 20px !important;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 25px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: #003a70;
+}
+
+/*RWD SECTION*/
+
+@media only screen and (max-width: 1209px) {
+  .separate {
+    display: none;  
+  }
+  .monday, .tuesday, .wednesday, .thursday, .friday {
+    width: 90% !important;   
+  }
+  .shedule_content {
+    margin-top: 320px !important;
+  }
+  .shedule_background {
+    margin-top: -270px !important; 
+    width: 100% !important;
+    height: 140%;
+  }
+  .background_under_shedule1, .background_under_shedule3 {
+    display: none;      
+  }
+  .background_under_shedule2 {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+
+@media only screen and (min-width: 1209px) {
+  .href_hover_style_m, .reload_shedule_m, .pdf_file_m, .padding_icon_m, .icon_style_txt_m {
+    display: none !important;  
+  }   
+}
+
+@media only screen and (max-width: 1180px) {
+  .background_under_shedule1, .background_under_shedule2 {
+    max-width: 330px !important;    
+  }
+}
